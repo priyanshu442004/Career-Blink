@@ -18,7 +18,7 @@ const Navbar = () => {
             <ul className="hidden md:flex space-x-6 text-lg text-gray-800 font-medium items-center ml-[50px] pl-4">
               {[
                 { name: "Scan Resume", path: "/ScanResume", subItems: ["ATS Checker", "Formatting Tips"] },
-                { name: "Mock Interview", path: "/MockInterview", subItems: ["Technical Round", "HR Round"] },
+                { name: "Mock Interview", path: "/MockInterview", subItems: ["AI Mock Interview","Interview practice","Interview Tips"] },
                 { name: "Prep Material", path: "/PrepMaterial", subItems: ["DSA", "Aptitude", "Puzzles"] },
                 { name: "English Communication", path: "/EnglishCommunication", subItems: ["Speaking", "Writing"] },
               ].map(({ name, path, subItems }, index) => (
