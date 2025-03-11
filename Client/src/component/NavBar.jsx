@@ -28,14 +28,14 @@ const Navbar = () => {
                 { name: "Mock Interview", subItems: ["Technical Round", "HR Round"] },
                 { name: "Prep Material", subItems: ["DSA", "Aptitude", "Puzzles"] },
                 { name: "English Communication", subItems: ["Speaking", "Writing"] },
-              ].map(({ name, subItems }, index) => (
+              ].map(({ name, path, subItems }, index) => (
                 <li key={name} className="relative group">
                   <div
                     className="flex items-center cursor-pointer hover:text-black"
                     onClick={() =>
                       setDropdownOpen(null)}
                     onMouseEnter={() =>
-                      setDropdownOpen(dropdownOpen === index ? null : index)
+                      setDropdownOpen(dropdownOpen === index ? null : index)   
                     }
                   >
                     <p
