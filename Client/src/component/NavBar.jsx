@@ -25,9 +25,9 @@ const Navbar = () => {
             <ul className="hidden md:flex space-x-6 text-lg text-gray-800 font-medium items-center ml-[50px] pl-4">
               {[
                 { name: "Scan Resume", path: "/ScanResume", subItems: ["ATS Checker", "Formatting Tips"] },
-                { name: "Mock Interview", path: "/MockInterview", subItems: ["AI Mock Interview","Interview Practice", "Interview Tips"] },
-                { name: "Prep Material", path: "/PrepMaterial", subItems: ["DSA", "Aptitude", "HandWritten Notes"] },
-                { name: "English Communication", path: "/EnglishCommunication", subItems: ["Speaking Tips", "Group Discussion Tips"] },
+                { name: "Mock Interview", path: "/MockInterview", subItems: ["Technical Round", "HR Round"] },
+                { name: "Prep Material", path: "/PrepMaterial", subItems: ["DSA", "Aptitude", "Puzzles"] },
+                { name: "English Communication", path: "/EnglishCommunication", subItems: ["Speaking", "Writing"] },
               ].map(({ name, path, subItems }, index) => (
                 <li key={name} className="relative group">
                   <div
@@ -64,7 +64,7 @@ const Navbar = () => {
                           className="px-4 py-2 hover:bg-gray-100"
                         >
                           <NavLink
-                            to={`${path}/${subItem.replace(/\s+/g, "")}`}
+                            to={`/${subItem.replace(/\s+/g, "")}`}
                           >
                             {subItem}
                           </NavLink>
@@ -79,13 +79,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4 items-center bg-gray-100 shadow-md h-16 p-6 rounded-xl w-[20%] justify-between">
             <a
               href="/login"
-              className="border border-gray-400 px-5 py-2 text-lg rounded-lg hover:border-blue-600 transition leading-none hover:border-2"
+              className="border border-gray-00 text-gray-800 font-semibold px-5 py-2 text-lg rounded-lg hover:border-blue-600 transition leading-none hover:border-2"
             >
               Login
             </a>
             <a
               href="/Signup"
-              className="bg-blue-600 text-white px-5 py-2 text-lg rounded-lg hover:bg-blue-700 transition leading-none"
+              className="bg-blue-600 text-white font-semibold px-5 py-2 text-gray-800 text-lg rounded-lg hover:bg-blue-700 transition leading-none"
             >
               Signup
             </a>
@@ -131,14 +131,14 @@ const Navbar = () => {
               <NavLink
               onClick={() => setIsOpen(false)}
                 to="/login"
-                className="px- border-t pt-3 leading-none ml-[10px]"
+                className="font-semibold border-t pt-3 leading-none ml-[10px]"
               >
                 Login
               </NavLink>
               <NavLink
               onClick={() => setIsOpen(false)}
                 to="/Signup"
-                className="px- bg-blue-600 text-white py-3 rounded-lg w-[20%] text-center leading-none"
+                className="font-semibold bg-blue-600 text-white py-3 rounded-lg w-[20%] text-center leading-none"
               >
                 Signup
               </NavLink>
