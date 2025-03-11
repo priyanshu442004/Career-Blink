@@ -25,9 +25,9 @@ const Navbar = () => {
             <ul className="hidden md:flex space-x-6 text-lg text-gray-800 font-medium items-center ml-[50px] pl-4">
               {[
                 { name: "Scan Resume", path: "/ScanResume", subItems: ["ATS Checker", "Formatting Tips"] },
-                { name: "Mock Interview", path: "/MockInterview", subItems: ["Technical Round", "HR Round"] },
-                { name: "Prep Material", path: "/PrepMaterial", subItems: ["DSA", "Aptitude", "Puzzles"] },
-                { name: "English Communication", path: "/EnglishCommunication", subItems: ["Speaking", "Writing"] },
+                { name: "Mock Interview", path: "/MockInterview", subItems: ["AI Mock Interview","Interview Practice", "Interview Tips"] },
+                { name: "Prep Material", path: "/PrepMaterial", subItems: ["DSA", "Aptitude", "HandWritten Notes"] },
+                { name: "English Communication", path: "/EnglishCommunication", subItems: ["Speaking Tips", "Group Discussion Tips"] },
               ].map(({ name, path, subItems }, index) => (
                 <li key={name} className="relative group">
                   <div
@@ -35,7 +35,7 @@ const Navbar = () => {
                     onClick={() =>
                       setDropdownOpen(null)}
                     onMouseEnter={() =>
-                      setDropdownOpen(dropdownOpen === index ? null : index)
+                      setDropdownOpen(dropdownOpen === index ? null : index)   
                     }
                   >
                     <p
