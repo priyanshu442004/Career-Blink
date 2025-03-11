@@ -79,13 +79,13 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4 items-center bg-gray-100 shadow-md h-16 p-6 rounded-xl w-[20%] justify-between">
             <a
               href="/login"
-              className="border border-gray-400 px-5 py-2 text-lg rounded-lg hover:border-blue-600 transition leading-none hover:border-2"
+              className="border border-gray-00 text-gray-800 font-semibold px-5 py-2 text-lg rounded-lg hover:border-blue-600 transition leading-none hover:border-2"
             >
               Login
             </a>
             <a
               href="/Signup"
-              className="bg-blue-600 text-white px-5 py-2 text-lg rounded-lg hover:bg-blue-700 transition leading-none"
+              className="bg-blue-600 text-white font-semibold px-5 py-2 text-gray-800 text-lg rounded-lg hover:bg-blue-700 transition leading-none"
             >
               Signup
             </a>
@@ -131,14 +131,14 @@ const Navbar = () => {
               <NavLink
               onClick={() => setIsOpen(false)}
                 to="/login"
-                className="px- border-t pt-3 leading-none ml-[10px]"
+                className="font-semibold border-t pt-3 leading-none ml-[10px]"
               >
                 Login
               </NavLink>
               <NavLink
               onClick={() => setIsOpen(false)}
                 to="/Signup"
-                className="px- bg-blue-600 text-white py-3 rounded-lg w-[20%] text-center leading-none"
+                className="font-semibold bg-blue-600 text-white py-3 rounded-lg w-[20%] text-center leading-none"
               >
                 Signup
               </NavLink>
