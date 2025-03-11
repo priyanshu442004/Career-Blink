@@ -24,11 +24,11 @@ const Navbar = () => {
             </a>
             <ul className="hidden md:flex space-x-6 text-lg text-gray-800 font-medium items-center ml-[50px] pl-4">
               {[
-                { name: "Scan Resume", path: "/ScanResume", subItems: ["ATS Checker", "Formatting Tips"] },
-                { name: "Mock Interview", path: "/MockInterview", subItems: ["Technical Round", "HR Round"] },
-                { name: "Prep Material", path: "/PrepMaterial", subItems: ["DSA", "Aptitude", "Puzzles"] },
-                { name: "English Communication", path: "/EnglishCommunication", subItems: ["Speaking", "Writing"] },
-              ].map(({ name, path, subItems }, index) => (
+                { name: "Scan Resume", subItems: ["ATS Checker", "Formatting Tips"] },
+                { name: "Mock Interview", subItems: ["Technical Round", "HR Round"] },
+                { name: "Prep Material", subItems: ["DSA", "Aptitude", "Puzzles"] },
+                { name: "English Communication", subItems: ["Speaking", "Writing"] },
+              ].map(({ name, subItems }, index) => (
                 <li key={name} className="relative group">
                   <div
                     className="flex items-center cursor-pointer hover:text-black"
@@ -64,7 +64,7 @@ const Navbar = () => {
                           className="px-4 py-2 hover:bg-gray-100"
                         >
                           <NavLink
-                            to={`${path}/${subItem.replace(/\s+/g, "")}`}
+                            to={`/${subItem.replace(/\s+/g, "")}`}
                           >
                             {subItem}
                           </NavLink>

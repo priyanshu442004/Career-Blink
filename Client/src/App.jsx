@@ -15,7 +15,7 @@ const App = () => {
       createRoutesFromElements(
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
-         <Route path='ScanResume' element={<ScanResume />} />  
+         <Route path='ATSChecker' element={<ScanResume />} />  
          <Route path='MockInterview' element={<MockInterview />} /> 
          <Route path='PrepMaterial' element={<PrepMaterial />} />
          <Route path='EnglishCommunication' element={<EnglishCommunication />} />   
