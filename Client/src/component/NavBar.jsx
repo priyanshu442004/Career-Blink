@@ -20,17 +20,17 @@ const Navbar = () => {
               href="/"
               className="text-2xl font-bold text-gray-900 flex items-center leading-none"
             >
-              𝕮𝖆𝖗𝖊𝖊𝖗𝕭𝖑𝖎𝖓🅺
+              𝕮𝖆𝖗𝖊𝖊𝖗𝕭𝖑𝖎𝖓🅺 
             </a>
             <ul className="hidden md:flex space-x-6 text-lg text-gray-800 font-medium items-center ml-[50px] pl-4">
               {[
                 { name: "Scan Resume", subItems: ["ATS Checker", "Formatting Tips"] },
-                { name: "Mock Interview", subItems: ["Technical Round", "HR Round"] },
-                { name: "Prep Material", subItems: ["DSA", "Aptitude", "Puzzles"] },
+                { name: "Mock Interview", subItems: ["AI Mock Interview", "Interview Practice","Interview Tips"] },
+                { name: "Prep Material", subItems: ["DSA", "Aptitude", "Notes"] },
                 { name: "English Communication", subItems: ["Speaking", "Writing"] },
               ].map(({ name, path, subItems }, index) => (
                 <li key={name} className="relative group">
-                  <div
+                  <div                       
                     className="flex items-center cursor-pointer hover:text-black"
                     onClick={() =>
                       setDropdownOpen(null)}

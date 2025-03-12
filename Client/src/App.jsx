@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route,RouterProvider} from 'react-router-dom';
 import Home from './pages/Home';
-import ScanResume from './pages/ScanResume';
+import Ats_Checker from './pages/Ats_Checker';
 import MockInterview from './pages/MockInterview';
 import PrepMaterial from './pages/PrepMaterial';
 import EnglishCommunication from './pages/EnglishCommunication'
@@ -15,7 +15,7 @@ const App = () => {
       createRoutesFromElements(
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
-         <Route path='ScanResume' element={<ScanResume />} />  
+         <Route path='Ats_Checker' element={<Ats_Checker />} />  
          <Route path='MockInterview' element={<MockInterview />} /> 
          <Route path='PrepMaterial' element={<PrepMaterial />} />
          <Route path='EnglishCommunication' element={<EnglishCommunication />} />   
