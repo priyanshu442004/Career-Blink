@@ -8,7 +8,6 @@ import EnglishCommunication from './pages/EnglishCommunication'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
-import Ats_Checker from './pages/Ats_Checker';
 
 const App = () => {
 
