@@ -8,6 +8,7 @@ import EnglishCommunication from './pages/EnglishCommunication'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
+import Ats_Checker from './pages/Ats_Checker';
 
 const App = () => {
 
@@ -15,7 +16,7 @@ const App = () => {
       createRoutesFromElements(
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
-         <Route path='Ats_Checker' element={<Ats_Checker />} />  
+         <Route path='ATSChecker' element={<Ats_Checker />} />  
          <Route path='MockInterview' element={<MockInterview />} /> 
          <Route path='PrepMaterial' element={<PrepMaterial />} />
          <Route path='EnglishCommunication' element={<EnglishCommunication />} />   
