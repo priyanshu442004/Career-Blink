@@ -135,21 +135,7 @@ console.log(result.response.text());
         </button>
       </form>
 
-      {/* {scoreDetails && (
-        <div className="mt-4">
-          <p className="text-lg font-semibold">
-            ✅ ATS Score: {atsScore.totalScore}%
-          </p>
-          <ul className="mt-2 space-y-1">
-            <li>🔎 Relevant Keywords: {atsScore.relevantKeywords}%</li>
-            <li>💼 Skill Matching: {atsScore.skillMatching}%</li>
-            <li>📅 Experience Alignment: {atsScore.experienceAlignment}%</li>
-            <li>🎓 Education Fit: {atsScore.educationFit}%</li>
-            <li>🏆 Job Title Similarity: {atsScore.jobTitleSimilarity}%</li>
-            <li>📄 Formatting & Structure: {atsScore.formattingStructure}%</li>
-          </ul>
-        </div>
-      )} */}
+      
     </div>
   );
 };
