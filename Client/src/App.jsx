@@ -12,6 +12,7 @@ import EnglishCommunication from './pages/EnglishCommunication'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
+import FileReader from './pages/FileReader';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
          <Route path='ATSChecker' element={<Ats_Checker />} />  
+         <Route path='File' element={<FileReader />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
          <Route path='AIMockInterview' element={<AIMockInterview />} />  
          <Route path='InterviewPractice' element={<InterviewPractice />} /> 
