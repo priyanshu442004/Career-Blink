@@ -3,7 +3,7 @@ import { useState } from "react";
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import toast from "react-hot-toast";
 
-const Ats_Checker = () => {
+const ATS_Score = () => {
   const [resume, setResume] = useState("");
   const [jobDescription, setJobDescription] = useState("");
 
@@ -140,4 +140,4 @@ console.log(result.response.text());
   );
 };
 
-export default Ats_Checker;
+export default ATS_Score;

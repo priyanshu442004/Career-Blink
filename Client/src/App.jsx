@@ -1,7 +1,6 @@
 import React from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route,RouterProvider} from 'react-router-dom';
 import Home from './pages/Home';
-import Ats_Checker from './pages/Ats_Checker';
 import FormattingTips from './pages/FormattingTips'
 import AIMockInterview from './pages/AIMockInterview'
 import InterviewPractice from './pages/InterviewPractice';
@@ -13,6 +12,7 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
 import FileReader from './pages/FileReader';
+import ATS_Score from './pages/ATS_Score';
 
 const App = () => {
 
@@ -20,8 +20,8 @@ const App = () => {
       createRoutesFromElements(
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
-         <Route path='ATSChecker' element={<Ats_Checker />} />  
-         <Route path='File' element={<FileReader />} />  
+         <Route path='ATSChecker' element={<FileReader />} />  
+         <Route path='ATS-Score' element={<ATS_Score />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
          <Route path='AIMockInterview' element={<AIMockInterview />} />  
          <Route path='InterviewPractice' element={<InterviewPractice />} /> 
