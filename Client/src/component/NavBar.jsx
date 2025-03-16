@@ -94,25 +94,25 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden absolute top-20 left-0 w-full bg-gray-100 shadow-lg rounded-xl"
           >
-            <ul className="flex flex-col text-lg text-gray-800 font-medium space-y-5 py-6">
+            <ul className="flex flex-col text-gray-800 space-y-5 py-6">
               {menuItems.map(({ name, path, subItems }) => (
                 <li key={name}>
-                  <NavLink
+                  <div
                     to={path || "#"}
                     onClick={() => setIsOpen(false)}
-                    className={({ isActive }) =>
-                      `px-6 hover:text-black leading-none ${isActive ? "text-blue-600 font-semibold" : ""}`
+                    className={
+                      `px-6 hover:text-black leading-none font-bold text-xl`
                     }
                   >
                     {name}
-                  </NavLink>
+                  </div>
                   {subItems && (
-                    <ul className="pl-8 space-y-2">
+                    <ul className="pl-8 space-y-2 font-semibold">
                       {subItems.map((subItem) => (
                         <li key={subItem} onClick={() => setIsOpen(false)}>
                           <NavLink
                             to={`/${subItem.replace(/\s+/g, "")}`}
-                            className="block hover:text-black"
+                            className="block hover:text-blue-600 "
                           >
                             {subItem}
                           </NavLink>
