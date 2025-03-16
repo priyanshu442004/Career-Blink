@@ -11,8 +11,8 @@ import EnglishCommunication from './pages/EnglishCommunication'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
-import FileReader from './pages/FileReader';
 import ATS_Score from './pages/ATS_Score';
+import Ats_Checker from './pages/Ats_Checker';
 
 const App = () => {
 
@@ -20,7 +20,7 @@ const App = () => {
       createRoutesFromElements(
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
-         <Route path='ATSChecker' element={<FileReader />} />  
+         <Route path='ATSChecker' element={<Ats_Checker />} />  
          <Route path='ATS-Score' element={<ATS_Score />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
          <Route path='AIMockInterview' element={<AIMockInterview />} />  
