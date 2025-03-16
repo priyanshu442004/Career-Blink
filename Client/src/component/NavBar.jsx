@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
+  const [active, setActive] = useState("");
   const navigate = useNavigate();
 
   const menuItems = [
@@ -101,7 +102,7 @@ const Navbar = () => {
                     to={path || "#"}
                     onClick={() => setIsOpen(false)}
                     className={
-                      `px-6 hover:text-black leading-none font-bold text-xl`
+                      `px-6 text-black leading-none font-bold text-xl`
                     }
                   >
                     {name}
@@ -109,10 +110,13 @@ const Navbar = () => {
                   {subItems && (
                     <ul className="pl-8 space-y-2 font-semibold">
                       {subItems.map((subItem) => (
-                        <li key={subItem} onClick={() => setIsOpen(false)}>
+                        <li
+                        key={subItem} onClick={() =>{
+                          setActive(subItem)
+                          setIsOpen(false)}}>
                           <NavLink
                             to={`/${subItem.replace(/\s+/g, "")}`}
-                            className="block hover:text-blue-600 "
+                            className={`block hover:text-blue-600 ${active === subItem ? "text-blue-600" : ""}`} 
                           >
                             {subItem}
                           </NavLink>
