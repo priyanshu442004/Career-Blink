@@ -115,6 +115,7 @@ const Home = () => {
           </p>
         </div>
       </div>
+      <h1>This is New </h1>
     </div>
   );
 };
