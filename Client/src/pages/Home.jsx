@@ -26,7 +26,7 @@ const Home = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="my-16 ml-4">
+      <div className="my-24 ml-4">
         <h2 className="text-3xl text-center md:text-left md:text-6xl">
           <span className=" text-outline font-extrabold md:text-8xl">
             Welcome Back
@@ -45,7 +45,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="flex w-full items-center justify-evenly md:px-12 md:py-2 md:items-center md:justify-end gap-12">
+      <div className="flex w-full items-center justify-evenly md:px-12 md:items-center md:justify-end gap-12">
         <p className="text-3xl font-semibold text-gray-900 text-center">
           250k+
           <span className="block text-xl text-muted-foreground font-normal">
