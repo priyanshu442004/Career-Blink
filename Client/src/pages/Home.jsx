@@ -19,14 +19,14 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <div className="">
       {/* Top Banner */}
       <div className="flex justify-center items-center bg-gradient-to-r from-blue-600 to-green-400 h-10 text-white text-sm md:text-base font-medium">
         All-in-One Placement Hub – Everything you need to land your dream job.
       </div>
 
       {/* Hero Section */}
-      <div className="my-8">
+      <div className="my-16 ml-4">
         <h2 className="text-3xl text-center md:text-left md:text-6xl">
           <span className=" text-outline font-extrabold md:text-8xl">
             Welcome Back
@@ -38,14 +38,14 @@ const Home = () => {
           Upgrade yourself with us.
         </h2>
 
-        <p className="mt-4 text-muted-foreground text-sm">
-          Boost your interview skills and increase your success rate with
+        <p className="mt-4 text-muted-foreground text-md">
+          Boost your interview skills and increase your success rate with <br />
           AI-driven insights. Discover a smarter way to prepare, practice, and
           stand out.
         </p>
       </div>
 
-      <div className="flex w-full items-center justify-evenly md:px-12 md:py-16 md:items-center md:justify-end gap-12">
+      <div className="flex w-full items-center justify-evenly md:px-12 md:py-10 md:items-center md:justify-end gap-12">
         <p className="text-3xl font-semibold text-gray-900 text-center">
           250k+
           <span className="block text-xl text-muted-foreground font-normal">
@@ -61,14 +61,14 @@ const Home = () => {
       </div>
 
       {/* First image section */}
-      <div className="w-full mt-4 rounded-xl bg-gray-100 h-[420px] drop-shadow-md overflow-hidden relative">
+      <div className="w-full mt-4 rounded-xl bg-gray-100 h-[420px] drop-shadow-md overflow-hidden relative ml-1">
         <img src={heroimg} alt="" className="w-full h-full object-cover" />
 
         <div className="absolute top-4 left-4 px-4 py-2 rounded-md bg-white/40 backdrop-blur-md">
           Inteviews Copilot&copy;
         </div>
 
-        <div className="hidden md:block absolute w-80 bottom-4 right-4 px-4 py-2 rounded-md bg-white/60 backdrop-blur-md">
+        <div className="md:block absolute w-80 bottom-4 right-4 px-4 py-2 rounded-md bg-white/60 backdrop-blur-md">
           <h2 className="text-black-500 font-semibold">Test Yourself</h2>
           <p className="text-sm text-black-500">
             Pick the position you are interviewing for, take an AI-powered
@@ -86,7 +86,7 @@ const Home = () => {
       </div>
       {/* marquee section */}
       <div className="w-full my-12">
-        <Marquee pauseOnHover>
+        <Marquee>
           <img src={firebaseLogo} alt="Firebase" className="h-16 mx-8" />
           <img src={meetLogo} alt="Google Meet" className="h-16 mx-8" />
           <img src={zoomLogo} alt="Zoom" className="h-16 mx-8" />
@@ -116,8 +116,6 @@ const Home = () => {
           </p>
         </div>
       </div>
-      <h1>This is New </h1>
-      <h1>New 1 again</h1>
     </div>
   );
 };
