@@ -31,7 +31,7 @@ const Navbar = () => {
               {menuItems.map(({ name, path, subItems }, index) => (
                 <li key={name} className="relative group">
                   <div
-                    className="flex items-center cursor-pointer hover:text-black"
+                    className="flex items-center cursor-pointer hover:text-blue-600"
                     onClick={() => {
                       if (path) {
                         navigate(path);
