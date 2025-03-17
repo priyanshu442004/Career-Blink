@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <div className="w-full justify-center items-center p-auto">
-      <nav className="fixed w-full top-[25px] z-50 flex items-center">
+      <nav className="bg-gray-100 md:bg-transparent fixed w-full md:top-[25px] z-50 flex items-center">
         <div className="container mx-auto flex justify-between items-center w-full h-full">
           <div
             onMouseLeave={() => setDropdownOpen(null)}
