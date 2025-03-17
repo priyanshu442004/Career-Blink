@@ -45,7 +45,7 @@ const Home = () => {
         </p>
       </div>
 
-      <div className="flex w-full items-center justify-evenly md:px-12 md:py-10 md:items-center md:justify-end gap-12">
+      <div className="flex w-full items-center justify-evenly md:px-12 md:py-2 md:items-center md:justify-end gap-12">
         <p className="text-3xl font-semibold text-gray-900 text-center">
           250k+
           <span className="block text-xl text-muted-foreground font-normal">
@@ -85,7 +85,7 @@ const Home = () => {
         </div>
       </div>
       {/* marquee section */}
-      <div className="w-full my-12">
+      <div className="w-full my-4 md:my-8">
         <Marquee>
           <img src={firebaseLogo} alt="Firebase" className="h-16 mx-8" />
           <img src={meetLogo} alt="Google Meet" className="h-16 mx-8" />
@@ -103,7 +103,7 @@ const Home = () => {
           <img
             src={homeReal}
             alt="Transform your preparation"
-            className="w-full max-h-96 rounded-md object-cover"
+            className="ml-2 w-full max-h-110 rounded-md object-cover"
           />
         </div>
 
