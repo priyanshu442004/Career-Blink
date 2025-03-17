@@ -2,11 +2,13 @@
 import React from "react";
 import heroimg from "../assets/hero.jpg";
 import homeReal from "../assets/homeReal.jpg";
-import firebaseLogo from "../assets/logo/firebase.png";
+import google from "../assets/logo/google.png";
 import meetLogo from "../assets/logo/meet.png";
 import zoomLogo from "../assets/logo/zoom.png";
 import microsoftLogo from "../assets/logo/microsoft.png";
-import tailwindLogo from "../assets/logo/tailwindcss.png";
+import facebook from "../assets/logo/facebook.png";
+import nvidia from "../assets/logo/nvidia.png";
+import oracal from "../assets/logo/oracal.png";
 import { Sparkles } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import { useNavigate } from "react-router-dom";
@@ -18,7 +20,7 @@ const Home = () => {
     navigate("/AIMockInterview");
   };
 
-  return (
+  return ( 
     <div className="overflow-x-hidden">
       {/* Top Banner */}
       <div className="flex justify-center items-center bg-gradient-to-r from-blue-600 to-green-400 h-10 text-white text-sm md:text-base font-medium">
@@ -87,14 +89,13 @@ const Home = () => {
       {/* marquee section */}
       <div className="w-full my-4 md:my-8">
         <Marquee>
-          <img src={firebaseLogo} alt="Firebase" className="h-16 mx-8" />
+          <img src={google} alt="google" className="h-16 mx-8" />
           <img src={meetLogo} alt="Google Meet" className="h-16 mx-8" />
           <img src={zoomLogo} alt="Zoom" className="h-16 mx-8" />
-          <img src={firebaseLogo} alt="Firebase" className="h-16 mx-8" />
           <img src={microsoftLogo} alt="Microsoft" className="h-16 mx-8" />
-          <img src={meetLogo} alt="Google Meet" className="h-16 mx-8" />
-          <img src={tailwindLogo} alt="Tailwind CSS" className="h-16 mx-8" />
-          <img src={microsoftLogo} alt="Microsoft" className="h-16 mx-8" />
+          <img src={facebook} alt="Facebook" className="h-16 mx-8" />
+          <img src={nvidia} alt="Nvidia" className="h-16 mx-8" />
+          <img src={oracal} alt="Oracal" className="h-16 mx-8" />
         </Marquee>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
