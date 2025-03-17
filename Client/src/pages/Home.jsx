@@ -115,6 +115,9 @@ const Home = () => {
           </p>
         </div>
       </div>
+      <h1>
+        Remove
+      </h1>
     </div>
   );
 };
