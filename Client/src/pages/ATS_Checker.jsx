@@ -11,13 +11,10 @@ const Ats_Checker = () => {
 
   return (
     <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen">
-      {/* Top Banner */}
-      <div className="flex justify-center items-center bg-gradient-to-r from-blue-600 to-green-400 h-10 text-white text-sm md:text-base font-medium">
-        All-in-One Placement Hub – Everything you need to land your dream job.
-      </div>
+      
 
       {/* Hero Section */}
-      <div className="my-24 ml-4">
+      <div className="my-32 ml-4">
         <h2 className="text-3xl text-center md:text-left md:text-6xl">
           
           <span className="text-gray-500 font-extrabold">

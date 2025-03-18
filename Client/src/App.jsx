@@ -11,8 +11,9 @@ import EnglishCommunication from './pages/EnglishCommunication'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
-import ATS_Score from './pages/ATS_Score';
 import Ats_Checker from './pages/Ats_Checker';
+import ATS_calc from './pages/ATS_calc';
+import ATS_Score from './pages/ATS_Score';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
          <Route index element={<Home />} />
          <Route path='ATSChecker' element={<Ats_Checker />} />  
          <Route path='ATS-Score' element={<ATS_Score />} />  
+         <Route path='Calculating-score' element={<ATS_calc />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
          <Route path='AIMockInterview' element={<AIMockInterview />} />  
          <Route path='InterviewPractice' element={<InterviewPractice />} /> 

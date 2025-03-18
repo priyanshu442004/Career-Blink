@@ -99,10 +99,11 @@ const Read_Resume = () => {
         onClick={() => {
           localStorage.setItem('resume', text);
           localStorage.setItem('jobDesc', jobDesc);
+          localStorage.setItem('isAllowed', true);
           if(jobDesc.trim() === ''){
             toast.error('Please enter job description')
           }else{
-          navigate(`/ats-score`)
+          navigate(`/Calculating-score`)
         }}
       }
           className={`mt-4 w-[150px] ${
