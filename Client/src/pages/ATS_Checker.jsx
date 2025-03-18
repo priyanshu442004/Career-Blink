@@ -10,7 +10,7 @@ const Ats_Checker = () => {
   };
 
   return (
-    <div className="overflow-x-hidden bg-gray-100">
+    <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen">
       {/* Top Banner */}
       <div className="flex justify-center items-center bg-gradient-to-r from-blue-600 to-green-400 h-10 text-white text-sm md:text-base font-medium">
         All-in-One Placement Hub – Everything you need to land your dream job.
@@ -42,7 +42,7 @@ const Ats_Checker = () => {
           Check ATS score
         </button>
         </p>
-        <img src={resume} alt="" className='w-80 mr-12 absolute right-0 top-56 rounded-lg'/>
+        <img src={resume} alt="" className='w-80 mr-12 block -mt-8 rounded-lg'/>
         </div>
       </div>
 

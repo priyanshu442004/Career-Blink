@@ -12,7 +12,6 @@ const AIMockInterview = () => {
       interview, and get feedback on your performance. 100% free.
       </div>
       </div>
-      <h1>THis is me </h1>
     </div>
     
   );
