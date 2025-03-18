@@ -59,7 +59,7 @@ const Read_Resume = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+    <div className="mt-[15vw] bg-gray-100 flex items-center justify-center">
      
       <div className="bg-white p-8 rounded-full shadow-lg w-[400px] h-[400px] flex flex-col items-center justify-center">
         <h1 className="text-2xl font-bold text-gray-800 mb-4 text-center">
