@@ -42,7 +42,7 @@ const Ats_Checker = () => {
           Check ATS score
         </button>
         </p>
-        <img src={resume} alt="" className='w-70 mr-12 absolute right-0 top-56 rounded-lg'/>
+        <img src={resume} alt="" className='w-80 mr-12 absolute right-0 top-56 rounded-lg'/>
         </div>
       </div>
 
