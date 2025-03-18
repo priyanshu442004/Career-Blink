@@ -12,6 +12,7 @@ const Read_Resume = () => {
   const navigate = useNavigate();
 
   const [text, setText] = useState('');
+  const [jobDesc, setJob] = useState('');
   const [fileName, setFileName] = useState('');
   const [uploaded, setUploaded] = useState(false);
 
@@ -97,7 +98,13 @@ const Read_Resume = () => {
         <button 
         onClick={() => {
           localStorage.setItem('resume', text);
-          navigate(`/ats-score`)}}
+          localStorage.setItem('jobDesc', jobDesc);
+          if(jobDesc.trim() === ''){
+            toast.error('Please enter job description')
+          }else{
+          navigate(`/ats-score`)
+        }}
+      }
           className={`mt-4 w-[150px] ${
             uploaded ? 'bg-blue-600' : 'hidden'
           } text-white py-2 rounded-full font-medium transition hover:opacity-90 flex items-center justify-center`}
@@ -111,12 +118,18 @@ const Read_Resume = () => {
           Supported formats: PDF, DOCX (Max size: 5MB)
         </p>
       </div>
-      <div className=''>
-        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+      <div className='ml-16'>
+        <div className="w-96 h-[400px] bg-gray-100 rounded-lg overflow-y-auto p-4">
+        <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center">
           Enter job description
         </h2>
-        <div className="w-96 h-96 bg-gray-100 rounded-lg overflow-y-auto p-4">
-          <pre className="text-sm text-gray-600 whitespace-pre-wrap">{text}</pre>
+        <textarea
+  onChange={(e) => setJob(e.target.value)}
+  value={jobDesc}
+  placeholder="Enter your job description here..."
+  className="text-sm text-gray-600 h-[323px] w-[350px] resize-none border border-gray-300 rounded-md p-2 focus:outline-none">
+</textarea>
+
         </div>
       </div>
     </div>
