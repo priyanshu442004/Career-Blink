@@ -111,6 +111,14 @@ const Read_Resume = () => {
           Supported formats: PDF, DOCX (Max size: 5MB)
         </p>
       </div>
+      <div className=''>
+        <h2 className="text-2xl font-bold text-gray-800 mb-4 text-center">
+          Enter job description
+        </h2>
+        <div className="w-96 h-96 bg-gray-100 rounded-lg overflow-y-auto p-4">
+          <pre className="text-sm text-gray-600 whitespace-pre-wrap">{text}</pre>
+        </div>
+      </div>
     </div>
   );
 };

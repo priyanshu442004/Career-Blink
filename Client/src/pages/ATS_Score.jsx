@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 const ATS_Score = () => {
   const [resume, setResume] = useState("");
   const [jobDescription, setJobDescription] = useState("");
+  const resumeDes=localStorage.getItem('resume');
 
   const handleSubmit = async (e) => {
     e.preventDefault();

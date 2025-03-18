@@ -3,11 +3,11 @@ import mock1 from "../assets/AIMOCK/mock1.jpg";
 const AIMockInterview = () => {
   return (
 
-    <div className="relative flex items-center justify-center min-h-screen">
-      <img src={mock1} alt="" className="w-full h-full object-cover" />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-black text-3xl font-bold">
+    <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex justify-center w-full flex justify-center">
+      
+      <div className="text-black text-3xl font-bold text-center w-full mt-[15%]">
         Get Ready for Your Next Interview <br/>
-        <div className="text-white">
+        <div className="text-white mt-8">
         Pick the position you are interviewing for, take an AI-powered practice 
       interview, and get feedback on your performance. 100% free.
       </div>
