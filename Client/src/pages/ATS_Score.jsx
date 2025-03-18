@@ -81,6 +81,27 @@ const ATS_Score = () => {
           })}
         </div>
       </div>
+      <div className='mt-8 flex flex-col items-center text-center'>
+        <p>
+
+          <span className='text-gray-500 font-extrabold text-2xl'>
+
+        Would you like to improve your ATS score? <br />
+          </span>
+
+          <span className='font-medium text-md text-2xl'>
+
+        Get AI tips for your resume <br />
+          </span>
+        </p>
+        <button
+          onClick={() => navigate('/FormattingTips')}
+          className="border hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-lg mt-6 hover:cursor-pointer"
+        >
+            Resume Formatting Tips
+        </
+        button>
+      </div>
     </div>
   )
 }
