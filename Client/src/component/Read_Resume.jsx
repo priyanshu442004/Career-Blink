@@ -99,11 +99,11 @@ const Read_Resume = () => {
         onClick={() => {
           localStorage.setItem('resume', text);
           localStorage.setItem('jobDesc', jobDesc);
-          localStorage.setItem('isAllowed', true);
+          localStorage.setItem('isAllowed', JSON.stringify(true));
           if(jobDesc.trim() === ''){
             toast.error('Please enter job description')
           }else{
-          navigate(`/Calculating-score`)
+            window.location.href = '/Calculating-Score';
         }}
       }
           className={`mt-4 w-[150px] ${

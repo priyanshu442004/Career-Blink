@@ -8,7 +8,7 @@ const ATS_calc = () => {
   const [ats, setAts] = useState(0);
   const resumeDes = localStorage.getItem("resume");
   const jobDes = localStorage.getItem("jobDesc");
-  const isAllowed = JSON.parse(localStorage.getItem('atsAllowed')) === true
+  const isAllowed = JSON.parse(localStorage.getItem('isAllowed')) === true
 
   
 
@@ -128,8 +128,10 @@ ${jobDes}
   };
 
   useEffect(() => {
+
     if (!isAllowed) {
       window.location.href = "/ATSChecker";
+      localStorage.setItem("hello", true);
     }
     else{
 

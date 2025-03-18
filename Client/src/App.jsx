@@ -11,7 +11,7 @@ import EnglishCommunication from './pages/EnglishCommunication'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import Rootlayout from './layout/Rootlayout';
-import Ats_Checker from './pages/Ats_Checker';
+import Ats_Checker from './pages/ATS_Checker';
 import ATS_calc from './pages/ATS_calc';
 import ATS_Score from './pages/ATS_Score';
 
