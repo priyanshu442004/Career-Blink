@@ -77,13 +77,13 @@ Follow the instructions and score exactly as per the given criteria — DO NOT D
 ### **💡 Output Format (STRICTLY FOLLOW THIS):**  
 
 Strictly return the output in this format without additional commentary:
-1. Relevant Keywords: 15/20 * 30% = 22.5%
-2. Skill Matching: 18/20 * 25% = 22.5%
-3. Experience Alignment: 12/20 * 20% = 12%
-4. Education Fit: 8/10 * 10% = 8%
-5. Job Title Similarity: 7/10 * 10% = 7%
-6. Formatting & Structure: 5/5 * 5% = 5%
-Total ATS Score: 77.5%
+1. Relevant Keywords: 15/20 * 30% = 22.5/30
+2. Skill Matching: 18/20 * 25% = 22.5/25
+3. Experience Alignment: 12/20 * 20% = 12/20
+4. Education Fit: 8/10 * 10% = 8/10
+5. Job Title Similarity: 7/10 * 10% = 7/10
+6. Formatting & Structure: 5/5 * 5% = 5/5
+Total ATS Score: 77.5
 
 ### **Important Rules:**
 - Output ONLY the final score.  
@@ -106,7 +106,7 @@ ${jobDes}
 
       const match = result.response
         .text()
-        .match(/Total ATS Score:\s*([\d.]+)%/);
+        .match(/Total ATS Score:\s*([\d.]+)/);
       if (match) {
         const score = parseFloat(match[1]); 
         setAts(score); 

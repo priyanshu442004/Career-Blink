@@ -43,8 +43,7 @@ const ATS_Score = () => {
         </h1>
         <div className="space-y-4">
           {lines.map((line, index) => {
-            // Extract only the percentage value using regex
-            const percentageMatch = line.match(/=\s*([\d.]+%)/);
+            const percentageMatch = line.match(/=\s*([\d.]+\/[\d.]+)/);
 
             if (line.includes('Total ATS Score') && percentageMatch) {
               return (
