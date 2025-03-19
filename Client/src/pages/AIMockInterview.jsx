@@ -34,7 +34,28 @@ const AIMockInterview = () => {
           </button>
         </div>
       </div>
-    </div>
+      {/* C++ Component */}
+      <div className="mt-16 w-full max-w-xl px-4">
+        <div className="border rounded-lg p-6 shadow-sm bg-blue-100 hover:shadow-md transition-all">
+          <p className="text-sm text-black-500 mb-2">12 mins interview</p>
+
+          <h2 className="text-xl font-semibold mb-4">C++</h2>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            <span className="px-3 py-1 text-sm bg-white border rounded-md">
+              Core JAVA
+            </span>
+            <span className="px-3 py-1 text-sm bg-white border rounded-md">
+              Spring Framework
+            </span>
+          </div>
+
+          <button className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+            Take practice interview
+          </button>
+        </div>
+      </div>
+    </div>      
   );
 };
 
