@@ -26,7 +26,7 @@ const ATS_Score = () => {
     <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
       
       {/* Main Heading */}
-      <div className="text-black text-6xl font-extrabold text-center w-full mt-80 leading-tight">
+      <div className="text-black text-6xl font-extrabold text-center w-full mt-[400px] leading-tight">
         Your ATS score is : <br /> 
         <span className='text-6xl font-extrabold text-blue-600'>
             
@@ -43,8 +43,7 @@ const ATS_Score = () => {
         </h1>
         <div className="space-y-4">
           {lines.map((line, index) => {
-            // Extract only the percentage value using regex
-            const percentageMatch = line.match(/=\s*([\d.]+%)/);
+            const percentageMatch = line.match(/=\s*([\d.]+\/[\d.]+)/);
 
             if (line.includes('Total ATS Score') && percentageMatch) {
               return (
