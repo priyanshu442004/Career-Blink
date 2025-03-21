@@ -53,8 +53,7 @@ const FormattingTips = () => {
       </div>
 
 
-      {/* {Resume component} */}
-      <Read_Resume id="resume"/>
+      
       </div>
   )
 }
