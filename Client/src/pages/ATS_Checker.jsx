@@ -25,7 +25,7 @@ const Ats_Checker = () => {
         </h2>
         <div className=' flex flex-row justify-between'>
           
-        <p className="mt-[20px] text-muted-foreground text-md ">
+        <p className="mt-[20px] text-muted-foreground text-lg">
         Career-Blink’s ATS Checker helps you create a resume that passes applicant tracking systems with ease. <br /> Get personalized feedback, fix formatting issues, and boost your chances of landing interviews. <br /> Stand out to recruiters by making sure your resume is optimized for the job you want. <br /> Beat the bots and get hired!
         <br />
         <button
@@ -42,6 +42,8 @@ const Ats_Checker = () => {
         <img src={resume} alt="" className='w-80 mr-12 block -mt-8 rounded-lg'/>
         </div>
       </div>
+
+      
 
 
       {/* {Resume component} */}
