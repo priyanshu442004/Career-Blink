@@ -14,7 +14,7 @@ const FormattingTips = () => {
       
 
       {/* Hero Section */}
-      <div className="my-32 ml-4">
+      <div className="mt-32 ml-4">
         <h2 className="text-3xl text-center md:text-left md:text-6xl">
           
           <span className="text-gray-500 font-extrabold">
@@ -47,6 +47,9 @@ const FormattingTips = () => {
         
         </div>
       </div>
+
+      <hr
+  class="mt-12 mb-8 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-700 to-transparent opacity-25 dark:via-neutral-600" />
 
       <div className='flex justify-center w-full'>
         <img src={formatting} alt="" className='w-[95%] rounded-lg h-[500px]'/>

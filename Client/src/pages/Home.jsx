@@ -87,6 +87,8 @@ const Home = () => {
         </div>
       </div>
       {/* marquee section */}
+      <hr
+  class="mt-12  h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <div className="w-full my-4 md:my-8">
         <Marquee>
           <img src={google} alt="google" className="h-16 mx-8" />
@@ -98,6 +100,8 @@ const Home = () => {
           <img src={oracal} alt="Oracal" className="h-16 mx-8" />
         </Marquee>
       </div>
+      <hr
+  class=" mb-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:via-neutral-400" />
       <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
         {/* Image Section */}
         <div className="col-span-1 md:col-span-3">
