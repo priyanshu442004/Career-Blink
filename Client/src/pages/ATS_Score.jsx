@@ -23,10 +23,10 @@ const ATS_Score = () => {
       }, [navigate]);
 
   return (
-    <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
+    <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center min-h-screen flex flex-col items-center justify-center w-full">
       
       {/* Main Heading */}
-      <div className="text-black text-6xl font-extrabold text-center w-full mt-[400px] leading-tight">
+      <div className="text-black text-6xl font-extrabold text-center w-full mt-[20vh] leading-tight">
         Your ATS score is : <br /> 
         <span className='text-6xl font-extrabold text-blue-600'>
             
