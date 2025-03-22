@@ -22,7 +22,7 @@ const AIMockInterview = () => {
 
           <div className="flex flex-wrap gap-2 mb-6">
             <span className="px-3 py-1 text-sm bg-white border rounded-md">
-              Core JAVA
+              Core JAVA 
             </span>
             <span className="px-3 py-1 text-sm bg-white border rounded-md">
               Spring Framework
