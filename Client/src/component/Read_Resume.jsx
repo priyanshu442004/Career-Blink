@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
 import * as pdfjsLib from 'pdfjs-dist';
 import { FaCloudUploadAlt } from "react-icons/fa";
-import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-hot-toast';
 import { CiLocationArrow1 } from "react-icons/ci";
 
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
 
-const Read_Resume = () => {
-  const navigate = useNavigate();
+const Read_Resume = (props) => {
 
   const [text, setText] = useState('');
   const [jobDesc, setJob] = useState('');
@@ -37,7 +35,6 @@ const Read_Resume = () => {
 
       try {
         if (file.type === 'application/pdf') {
-          // ✅ Read PDF
           const arrayBuffer = await file.arrayBuffer();
           const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
 
@@ -100,11 +97,15 @@ const Read_Resume = () => {
           localStorage.setItem('resume', text);
           localStorage.setItem('jobDesc', jobDesc);
           localStorage.setItem('isAllowed', JSON.stringify(true));
+          if(props.show=="show"){
           if(jobDesc.trim() === ''){
             toast.error('Please enter job description')
           }else{
             window.location.href = '/Calculating-Score';
-        }}
+        }
+          }else{
+            toast.success('Resume uploaded successfully.')
+          }}
       }
           className={`mt-4 w-[150px] ${
             uploaded ? 'bg-blue-600' : 'hidden'
@@ -119,7 +120,7 @@ const Read_Resume = () => {
           Supported formats: PDF, DOCX (Max size: 5MB)
         </p>
       </div>
-      <div className='ml-16'>
+     { props.show=="show" && (<div className='ml-16'>
         <div className="w-96 h-[400px] bg-gray-100 rounded-lg overflow-y-auto p-4">
         <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center">
           Enter job description
@@ -132,7 +133,7 @@ const Read_Resume = () => {
 </textarea>
 
         </div>
-      </div>
+      </div>)}
     </div>
   );
 };

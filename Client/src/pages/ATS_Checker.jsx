@@ -54,7 +54,7 @@ const Ats_Checker = () => {
 
 
       {/* {Resume component} */}
-      <Read_Resume id="resume"/>
+      <Read_Resume show="show"/>
       </div>
   )
 }

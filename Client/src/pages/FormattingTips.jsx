@@ -55,7 +55,11 @@ const FormattingTips = () => {
         <img src={formatting} alt="" className='w-[95%] rounded-lg h-[500px]'/>
       </div>
 
-
+      <div class="pb-6 px-16 mt-12 flex items-center text-lg text-gray-800 before:flex-1 before:border-t before:border-gray-500 before:me-6 after:flex-1 after:border-t after:border-gray-500 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">Upload resume here</div>
+      
+  
+        {/* {Resume component} */}
+        <Read_Resume show="dontShow"/>
       
       </div>
   )
