@@ -95,8 +95,8 @@ const Read_Resume = (props) => {
         <button 
         onClick={() => {
           localStorage.setItem('resume', text);
+          localStorage.setItem('isAllowed', JSON.stringify(true));
           if(props.show=="show"){
-            localStorage.setItem('isAllowed', JSON.stringify(true));
             localStorage.setItem('jobDesc', jobDesc);
           }
           if(props.show=="show"){
@@ -107,6 +107,7 @@ const Read_Resume = (props) => {
         }
           }else{
             toast.success('Resume uploaded successfully.')
+            window.location.href = '/Formatting';
           }}
       }
           className={`mt-4 w-[150px] ${
@@ -114,7 +115,7 @@ const Read_Resume = (props) => {
           } text-white py-2 rounded-full font-medium transition hover:opacity-90 flex items-center justify-center`}
           
         >
-          Check ATS {' '} <CiLocationArrow1 className='font-bold text-xl'/>
+          {props.show=="show"?'Check ATS':'Calculate'} {' '} <CiLocationArrow1 className='font-bold text-xl'/>
         </button>
 
         

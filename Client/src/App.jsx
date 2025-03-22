@@ -14,6 +14,8 @@ import Rootlayout from './layout/Rootlayout';
 import Ats_Checker from './pages/ATS_Checker';
 import ATS_calc from './pages/ATS_calc';
 import ATS_Score from './pages/ATS_Score';
+import Formatting_Calc from './pages/Formatting_Calc';
+import Formatting_Result from './pages/Formatting_Result';
 
 const App = () => {
 
@@ -22,6 +24,8 @@ const App = () => {
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
          <Route path='ATSChecker' element={<Ats_Checker />} />  
+         <Route path='Formatting' element={<Formatting_Calc />} />  
+         <Route path='Formatting-Resume' element={<Formatting_Result />} />  
          <Route path='ATS-Score' element={<ATS_Score />} />  
          <Route path='Calculating-score' element={<ATS_calc />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
