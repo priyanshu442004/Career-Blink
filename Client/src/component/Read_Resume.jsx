@@ -95,8 +95,10 @@ const Read_Resume = (props) => {
         <button 
         onClick={() => {
           localStorage.setItem('resume', text);
-          localStorage.setItem('jobDesc', jobDesc);
-          localStorage.setItem('isAllowed', JSON.stringify(true));
+          if(props.show=="show"){
+            localStorage.setItem('isAllowed', JSON.stringify(true));
+            localStorage.setItem('jobDesc', jobDesc);
+          }
           if(props.show=="show"){
           if(jobDesc.trim() === ''){
             toast.error('Please enter job description')
