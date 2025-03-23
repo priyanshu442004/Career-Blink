@@ -3,8 +3,23 @@ import { useNavigate } from "react-router-dom";
 
 const AIMockInterview = () => {
   const goToPage = useNavigate();
-  const handleNavigate1 = () => {
-    goToPage("/AIMockInterview/JavaInterview");
+  const interview = [
+    {
+      language: "Java",
+      time: "12 mins interview",
+      path:"/AIMockInterview/JavaInterview",
+      skills: ["Core JAVA", "Spring Framework"]
+    },
+    {
+      language: "C++",
+      time: "12 mins interview",
+      path:"/AIMockInterview/C++Interview",
+      skills: ["Core JAVA", "Spring Framework"]
+    },
+  ];
+
+  const handleNavigate1 = (path) => {
+    goToPage(path);
   };
   return (
     <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
@@ -17,8 +32,34 @@ const AIMockInterview = () => {
         </div>
       </div>
 
-      {/* JAVA Component */}
-      <div className="mt-16 w-full max-w-xl px-4">
+      {
+        interview.map(({ language, time, skills, path }, index) => (
+          <div key={index} className="mt-16 w-full max-w-xl px-4">
+            <div className="border rounded-lg p-6 shadow-sm bg-blue-100 hover:shadow-md transition-all">
+              <p className="text-sm text-black-500 mb-2">{time}</p>
+
+              <h2 className="text-xl font-semibold mb-4">{language}</h2>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {skills.map((skill, i) => (
+                  <span key={i} className="px-3 py-1 text-sm bg-white border rounded-md">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+
+              <button
+                onClick={()=>{handleNavigate1(path)}}
+                className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+              >
+                Take practice interview
+              </button>
+            </div>
+          </div>
+        ))
+      }
+      
+      {/* <div className="mt-16 w-full max-w-xl px-4">
         <div className="border rounded-lg p-6 shadow-sm bg-blue-100 hover:shadow-md transition-all">
           <p className="text-sm text-black-500 mb-2">12 mins interview</p>
 
@@ -33,12 +74,15 @@ const AIMockInterview = () => {
             </span>
           </div>
 
-          <button  onClick={handleNavigate1}className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
+          <button
+            onClick={handleNavigate1}
+            className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+          >
             Take practice interview
           </button>
         </div>
       </div>
-      {/* C++ Component */}
+      
       <div className="mt-16 w-full max-w-xl px-4">
         <div className="border rounded-lg p-6 shadow-sm bg-blue-100 hover:shadow-md transition-all">
           <p className="text-sm text-black-500 mb-2">12 mins interview</p>
@@ -54,13 +98,11 @@ const AIMockInterview = () => {
             </span>
           </div>
 
-          <button
-            className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
-          >
+          <button className="w-full py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition">
             Take practice interview
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
