@@ -10,7 +10,7 @@ const Rootlayout = () =>{
         <div>
           <NavBar />
           <Outlet/>
-          {location.pathname === "/" && <Footer />} {/* Footer only on Home */}
+           <Footer />
         </div>
     )
 }
