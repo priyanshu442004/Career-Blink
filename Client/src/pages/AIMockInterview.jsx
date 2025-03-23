@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 const AIMockInterview = () => {
   const goToPage = useNavigate();
-  // Function to handle navigation
   const handleNavigate1 = () => {
     goToPage("/AIMockInterview/JavaInterview");
   };

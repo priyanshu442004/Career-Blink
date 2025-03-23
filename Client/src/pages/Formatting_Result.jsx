@@ -4,7 +4,7 @@ import { FaCheckCircle, FaExclamationTriangle } from "react-icons/fa";
 const Formatting_Result = () => {
   const result = localStorage.getItem("formattingDetails");
 
-  if (!result) return <p className="text-center text-white">No data available</p>;
+  if (!result) return <p className="flex justify-center items-center w-full min-h-screen text-center text-black">No data available.</p>;
 
   const sections = result.split("\n\n").map((section) => section.trim()); 
 
