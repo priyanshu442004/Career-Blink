@@ -32,9 +32,8 @@ const App = () => {
          <Route path='FormattingTips' element={<FormattingTips />} />  
 
          {/* AIMockInterview with nested route */}
-         <Route path='AIMockInterview' element={<AIMockInterview />} >  
-         <Route path='JavaInterview' element={<JavaInterview />} />
-         </Route>
+         <Route path='AIMockInterview' element={<AIMockInterview />} />  
+         <Route path='AIMockInterview/JavaInterview' element={<JavaInterview />} />
 
          <Route path='InterviewPractice' element={<InterviewPractice />} /> 
          <Route path='InterviewTips' element={<InterviewTips />} /> 
