@@ -1,7 +1,7 @@
 import React from 'react';
-import resume from '../assets/resume.jpg';
+import resume from '../../../assets/resume.jpg';
 import { useNavigate } from 'react-router-dom';
-import Read_Resume from '../component/Read_Resume';
+import Read_Resume from '../../../component/Read_Resume';
 
 const Ats_Checker = () => {
   const navigate = useNavigate();

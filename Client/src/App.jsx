@@ -1,21 +1,21 @@
 import React from 'react'
 import { createBrowserRouter, createRoutesFromElements, Route,RouterProvider} from 'react-router-dom';
 import Home from './pages/Home';
-import FormattingTips from './pages/FormattingTips'
-import AIMockInterview from './pages/AIMockInterview'
-import InterviewPractice from './pages/InterviewPractice';
-import InterviewTips from './pages/InterviewTips'
-import DSA from './pages/DSA';
-import Notes from './pages/Notes';
-import EnglishCommunication from './pages/EnglishCommunication'
-import Login from './pages/Login'
-import Signup from './pages/Signup'
+import FormattingTips from './pages/Scan Resume/Formatting tips/FormattingTips'
+import AIMockInterview from './pages/Mock Interview/AI mock Interview/AIMockInterview'
+import InterviewPractice from './pages/Mock Interview/Interview Practice/InterviewPractice';
+import InterviewTips from './pages/Mock Interview/Interview Tips/InterviewTips'
+import DSA from './pages/Prep Material/DSA/DSA';
+import Notes from './pages/Prep Material/Notes/Notes';
+import EnglishCommunication from './pages/English communication/EnglishCommunication'
+import Login from './pages/Login-Signup/Login'
+import Signup from './pages/Login-Signup/Signup'
 import Rootlayout from './layout/Rootlayout';
-import Ats_Checker from './pages/ATS_Checker';
-import ATS_calc from './pages/ATS_calc';
-import ATS_Score from './pages/ATS_Score';
-import Formatting_Calc from './pages/Formatting_Calc';
-import Formatting_Result from './pages/Formatting_Result';
+import Ats_Checker from './pages/Scan Resume/ATS Checker/ATS_Checker';
+import ATS_calc from './pages/Scan Resume/ATS Checker/ATS_calc';
+import ATS_Score from './pages/Scan Resume/ATS Checker/ATS_Score';
+import Formatting_Calc from './pages/Scan Resume/Formatting tips/Formatting_Calc';
+import Formatting_Result from './pages/Scan Resume/Formatting tips/Formatting_Result';
 
 const App = () => {
 

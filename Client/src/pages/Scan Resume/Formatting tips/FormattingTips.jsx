@@ -1,7 +1,7 @@
 import React from 'react';
-import formatting from '../assets/images/formatting.png';
+import formatting from '../../../assets/images/formatting.png';
 import { useNavigate } from 'react-router-dom';
-import Read_Resume from '../component/Read_Resume';
+import Read_Resume from '../../../component/Read_Resume';
 
 const FormattingTips = () => {
   const navigate = useNavigate();
