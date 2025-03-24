@@ -19,7 +19,7 @@ const JavaInterview = () => {
           Check out 10 of the most common Java Developer interview questions and
           take an AI-powered practice interview.
         </div>
-        <button className="w-full py-3 bg-gradient-to-r from-blue-600 to-blue-800 
+        <button className="py-3 px-6 bg-gradient-to-r from-blue-600 to-blue-800 
         text-white rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-900 
         transition-transform transform hover:scale-105 active:scale-95 font-semibold text-lg">
           Take Practice Interview
