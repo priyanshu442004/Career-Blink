@@ -7,13 +7,13 @@ const AIMockInterview = () => {
     {
       language: "Java",
       time: "12 mins interview",
-      path:"./JavaInterview",
+      path:"JavaInterview",
       skills: ["Core JAVA", "Spring Framework"]
     },
     {
       language: "C++",
       time: "12 mins interview",
-      path:"/AIMockInterview/C++Interview",
+      path:"C++Interview",
       skills: ["Core JAVA", "Spring Framework"]
     },
   ];
