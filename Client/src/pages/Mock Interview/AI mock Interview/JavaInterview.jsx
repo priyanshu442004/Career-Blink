@@ -2,7 +2,7 @@ import React from "react";
 
 const JavaInterview = () => {
   return (
-    <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
+    <div className="pb-20 overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
       {/* Main Heading */}
       <div className="text-black text-7xl font-extrabold text-center w-full mt-1 leading-tight">
         Java Developer interview <br />

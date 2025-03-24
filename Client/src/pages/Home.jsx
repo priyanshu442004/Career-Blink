@@ -21,7 +21,7 @@ const Home = () => {
   };
 
   return ( 
-    <div className="overflow-x-hidden">
+    <div className="pb-20 overflow-x-hidden">
       {/* Top Banner */}
       <div className="flex justify-center items-center bg-gradient-to-r from-blue-600 to-green-400 h-10 text-white text-sm md:text-base font-medium">
         All-in-One Placement Hub – Everything you need to land your dream job.

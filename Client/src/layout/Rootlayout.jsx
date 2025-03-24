@@ -10,7 +10,7 @@ const Rootlayout = () =>{
         <div>
           <NavBar />
           <Outlet/>
-           <Footer />
+           <Footer className="mt-auto"/>
         </div>
     )
 }

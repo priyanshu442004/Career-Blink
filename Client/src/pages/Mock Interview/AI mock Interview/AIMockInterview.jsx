@@ -22,7 +22,7 @@ const AIMockInterview = () => {
     goToPage(path);
   };
   return (
-    <div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
+    <div className="pb-20 overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center flex flex-col items-center justify-center w-full">
       {/* Main Heading */}
       <div className="text-black text-6xl font-extrabold text-center w-full mt-80 leading-tight">
         Prepare for your next interview
