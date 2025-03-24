@@ -9,7 +9,7 @@ const JavaInterview = () =>{
         <div className="text-black-800 mt-5 text-lg font-medium max-w-3xl mx-auto">
           Take an AI-powered Java
           practice interview, and get feedback on your performance. 100% free.
-          Let's Make you confident to crack Java Interview
+          Let's Make you confident to crack Java Interview.
         </div>
       </div>
         </div>
