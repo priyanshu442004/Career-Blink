@@ -48,12 +48,12 @@ const Footer = () => {
           onClick={()=>{
             window.location.href = "mailto:harshitvarshneyv2@gmail.com";
           }}
-          className="block hover:text-blue-600 mb-2">harshitvarshneyv2@gmail.com</h1>
+          className="block hover:text-blue-600 mb-2 hover:cursor-pointer">harshitvarshneyv2@gmail.com</h1>
           <h1
           onClick={()=>{
             window.location.href = "mailto:priyanshusharma442004@gmail.com";
           }}
-          className="block hover:text-blue-600 mb-2">priyanshusharma442004@gmail.com</h1>
+          className="block hover:text-blue-600 mb-2 hover:cursor-pointer">priyanshusharma442004@gmail.com</h1>
           <h1 className="block hover:text-blue-600 mb-4">8445544116</h1>
         </div>
       </div>
