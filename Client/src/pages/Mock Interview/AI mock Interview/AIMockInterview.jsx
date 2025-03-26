@@ -16,6 +16,12 @@ const AIMockInterview = () => {
       path:"C++Interview",
       skills: ["Core JAVA", "Spring Framework"]
     },
+    {
+      language: "JavaScript",
+      time: "15 mins interview",
+      path: "JavaScript",
+      skills: ["JavaScript","React.js"]
+    }
   ];
 
   const handleNavigate1 = (path) => {
