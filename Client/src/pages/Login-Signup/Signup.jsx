@@ -23,7 +23,7 @@ const Signup = () => {
       return;
     }
     console.log("Signup Data:", formData);
-    navigate("/dashboard"); // Redirect after signup
+    navigate("/");
   };
 
   return (
@@ -33,7 +33,6 @@ const Signup = () => {
           Create an Account 🚀
         </h2>
         <form onSubmit={handleSubmit}>
-          {/* Full Name */}
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-1">Full Name</label>
             <div className="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-purple-400">
@@ -50,7 +49,6 @@ const Signup = () => {
             </div>
           </div>
 
-          {/* Email */}
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-1">Email</label>
             <div className="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-purple-400">
@@ -67,7 +65,6 @@ const Signup = () => {
             </div>
           </div>
 
-          {/* Password */}
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-1">Password</label>
             <div className="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-purple-400">
@@ -84,7 +81,6 @@ const Signup = () => {
             </div>
           </div>
 
-          {/* Confirm Password */}
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-1">Confirm Password</label>
             <div className="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-purple-400">
@@ -101,7 +97,6 @@ const Signup = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition duration-300 transform hover:scale-105"
@@ -109,7 +104,6 @@ const Signup = () => {
             Sign Up
           </button>
 
-          {/* Already have an account? */}
           <p className="text-center text-sm text-gray-600 mt-4">
             Already have an account?{" "}
             <span

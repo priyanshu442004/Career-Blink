@@ -20,7 +20,6 @@ const Login = () => {
           Welcome Back! 👋
         </h2>
         <form onSubmit={handleSubmit}>
-          {/* Email Field */}
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-1">Email</label>
             <div className="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-400">
@@ -36,7 +35,6 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Password Field */}
           <div className="mb-4">
             <label className="block text-gray-700 font-medium mb-1">Password</label>
             <div className="flex items-center border rounded-lg px-4 py-2 focus-within:ring-2 focus-within:ring-blue-400">
@@ -52,7 +50,6 @@ const Login = () => {
             </div>
           </div>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg font-medium transition duration-300 transform hover:scale-105"
@@ -60,7 +57,6 @@ const Login = () => {
             Login
           </button>
 
-          {/* Register Link */}
           <p className="text-center text-sm text-gray-600 mt-4">
             Don't have an account?{" "}
             <span 
