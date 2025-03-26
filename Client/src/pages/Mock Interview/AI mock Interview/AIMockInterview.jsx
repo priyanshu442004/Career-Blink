@@ -21,6 +21,12 @@ const AIMockInterview = () => {
       time: "15 mins interview",
       path: "JavaScript",
       skills: ["JavaScript","React.js"]
+    },
+    {
+      language: "API Integration",
+      time: "15 mins interview",
+      path: "APIIntegration",
+      skills: ["API Integration"]
     }
   ];
 
