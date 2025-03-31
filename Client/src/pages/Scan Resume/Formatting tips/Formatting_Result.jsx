@@ -32,7 +32,7 @@ const Formatting_Result = () => {
         return (
           <div key={index} className="mb-6">
             <div
-              className={`pb-6 px-16 mt-6 flex items-center text-lg text-gray-800 before:flex-1 before:border-t before:border-gray-500 before:me-6 after:flex-1 after:border-t after:border-gray-500 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600 
+              className={`pb-6 px-16 mt-6 flex items-center text-lg text-gray-800 before:flex-1 before:border-t before:border-gray-500 before:me-6 after:flex-1 after:border-t after:border-gray-500 after:ms-6  dark:before:border-neutral-600 dark:after:border-neutral-600 
               ${headings.includes(normalizedTitle) ? "text-xl font-semibold text-blue-500" : "text-xl font-semibold text-blue-600"}`}
             >
               {title}
