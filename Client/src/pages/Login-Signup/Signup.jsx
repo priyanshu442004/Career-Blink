@@ -41,7 +41,7 @@ const Signup = () => {
         throw new Error("Signup failed!");
       }
 
-      const result = await response.json();
+      const result = await response.text();
       console.log("Signup Successful:", result);
 
       alert("Signup Successful! Redirecting to login...");
