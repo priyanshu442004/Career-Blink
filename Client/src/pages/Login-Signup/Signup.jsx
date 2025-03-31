@@ -16,14 +16,40 @@ const Signup = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match!");
       return;
     }
-    console.log("Signup Data:", formData);
-    navigate("/");
+    const userData = {
+      name: formData.fullName,
+      email: formData.email,
+      password: formData.password,
+    };
+
+    try {
+      const response = await fetch("http://localhost:8080/user/add", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Signup failed!");
+      }
+
+      const result = await response.json();
+      console.log("Signup Successful:", result);
+
+      alert("Signup Successful! Redirecting to login...");
+      navigate("/login");
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Signup failed. Please try again.");
+    }
   };
 
   return (
