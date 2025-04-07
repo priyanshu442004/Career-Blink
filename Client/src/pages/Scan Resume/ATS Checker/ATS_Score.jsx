@@ -94,7 +94,9 @@ const ATS_Score = () => {
           </span>
         </p>
         <button
-          onClick={() => navigate('/FormattingTips')}
+          onClick={() =>{
+            localStorage.setItem('isAllowed', true);
+            navigate('/Formatting')}}
           className="border hover:bg-gray-300 text-black font-bold py-2 px-4 rounded-lg mt-6 hover:cursor-pointer"
         >
             Resume Formatting Tips
