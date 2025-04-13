@@ -27,7 +27,7 @@ public class UserControllers {
 		return "New Student is added";
 	}
 	  @GetMapping("/all")
-	    public List<User> getAllUsers() {
+	    public List<User> getAllUsers() {	
 	        return userService.getAllStudent();
 	    }
 }
