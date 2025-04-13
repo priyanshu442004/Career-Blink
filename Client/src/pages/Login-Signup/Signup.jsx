@@ -38,14 +38,16 @@ const Signup = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Signup failed!");
+        if(response.status === 409){
+          const msg = await response.text();
+          alert(msg);
+        } else{
+          throw new Error("Signup failed!");
+        }
+      } else{
+        alert("Signup Successful! Redirecting to login...");
+        navigate("/");
       }
-
-      const result = await response.text();
-      console.log("Signup Successful:", result);
-
-      alert("Signup Successful! Redirecting to login...");
-      navigate("/login");
     } catch (error) {
       console.error("Error:", error);
       alert("Signup failed. Please try again.");
