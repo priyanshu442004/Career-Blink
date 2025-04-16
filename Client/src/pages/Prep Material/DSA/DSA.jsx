@@ -16,12 +16,28 @@ const DSA = () => {
   });
   const [totalSolved, setTotalSolved] = useState(solvedProblems.easy + solvedProblems.medium + solvedProblems.hard);
 
+  const [questions, setQuestions] = useState([
+    { id: 1, name: "Two Sum", difficulty: "Easy", completed: false },
+    { id: 2, name: "Longest Substring Without Repeating Characters", difficulty: "Medium", completed: false },
+    { id: 3, name: "Merge Intervals", difficulty: "Hard", completed: false }
+  ]);
+
   const resetFilters = () => {
     setSearch('');
     setStatus('All');
     setDifficulty('All');
     setPattern('All Patterns');
     setLanguage('Java');
+  };
+
+  const handleToggleCompleted = (id) => {
+    setQuestions((prevQuestions) =>
+      prevQuestions.map((question) =>
+        question.id === id
+          ? { ...question, completed: !question.completed }
+          : question
+      )
+    );
   };
   return (
 
@@ -129,8 +145,39 @@ const DSA = () => {
 })}
       </div>
     </div>
-
+    <div className="overflow-x-auto bg-zinc-900 rounded-lg shadow-lg p-4 mt-4">
+      <table className="min-w-full table-auto">
+        <thead className="bg-zinc-800">
+          <tr>
+            <th className="py-3 px-6 text-left text-md text-white font-semibold">Question Name</th>
+            <th className="py-3 px-4 text-left text-md text-white font-semibold">Difficulty</th>
+            <th className="py-3 px-6 text-center text-md  text-white font-semibold">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {questions.map((question) => (
+            <tr key={question.id} className="hover:bg-zinc-800 hover:cursor-pointer transition-all duration-200">
+              <td className="py-4 px-6 text-md font-medium text-white font-bold">{question.name}</td>
+              <td className={`py-4 px-6 text-md font-bold ${question.difficulty=="Easy"?"text-green-500":
+                question.difficulty=="Medium"?"text-yellow-500":
+                question.difficulty=="Hard"?"text-red-500":""
+              }`}>{question.difficulty}</td>
+              <td className="py-4 px-6 text-center">
+                <input
+                  type="checkbox"
+                  checked={question.completed}
+                  onChange={() => handleToggleCompleted(question.id)}
+                  className="w-6 h-6 rounded-lg transition-all duration-200 transform hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
         </div>
+
+        
 
       </div>
 
