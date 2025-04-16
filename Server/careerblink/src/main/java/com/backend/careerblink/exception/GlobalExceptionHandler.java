@@ -12,4 +12,12 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleEmailAlreadyExists(EmailAlreadyExistsException ex){
 		return ResponseEntity.status(HttpStatus.CONFLICT).body(ex.getMessage());
 	}
+	@ExceptionHandler(EmailDoesNotExistsException.class)
+	public ResponseEntity<String> handleEmailDoesNotExists(EmailDoesNotExistsException ex){
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
+	}
+	@ExceptionHandler(PasswordDoesNotMatchException.class)
+	public ResponseEntity<String> handlePasswordDoesNotMatch(PasswordDoesNotMatchException ex){
+		return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(ex.getMessage());
+	}
 }

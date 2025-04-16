@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios"; 
 import { useNavigate } from "react-router-dom";
 import { FaEnvelope, FaLock } from "react-icons/fa";
 
@@ -7,10 +8,28 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Email:", email, "Password:", password);
-    navigate("/"); 
+
+    try{
+      const response = await axios.post("http://localhost:8080/user/api/auth/login",{
+        email,
+        password,
+      });
+      // If successful
+    alert("Login successful:" + response.data);   
+    //alert(`Login successful: ${response.data}`); 
+    navigate("/"); // Navigate to homepage
+    } catch(error){
+      if (error.response) {
+        // Backend responded with a status other than 2xx
+        alert(error.response.data); // Shows "Email not registered" or "Incorrect password"
+    } else {
+      // Network error or something else
+      alert("An error occurred. Please try again.");
+    }
+    }
   };
 
   return (
