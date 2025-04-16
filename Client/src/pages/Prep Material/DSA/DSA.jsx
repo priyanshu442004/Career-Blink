@@ -1,12 +1,28 @@
 
 import React from "react";
+import { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 const DSA = () => {
-    const MyDSAPrep =[
-        {
-           
-        }
-    ]
+  const [search, setSearch] = useState('');
+  const [status, setStatus] = useState('All');
+  const [difficulty, setDifficulty] = useState('All');
+  const [pattern, setPattern] = useState('All Patterns');
+  const [language, setLanguage] = useState('Java');
+  const [solvedProblems, setSolvedProblems] = useState({
+    easy: 0,
+    medium: 0,
+    hard: 0,
+  });
+  const [totalSolved, setTotalSolved] = useState(solvedProblems.easy + solvedProblems.medium + solvedProblems.hard);
+
+  const resetFilters = () => {
+    setSearch('');
+    setStatus('All');
+    setDifficulty('All');
+    setPattern('All Patterns');
+    setLanguage('Java');
+  };
   return (
 
       <div className="flex flex-col justify-center items-center mt-30 space-y-4 text-center">
@@ -23,7 +39,96 @@ const DSA = () => {
         <div className="bg-white place-self-center w-11/12 max-w-large
                 flex flex-col p-7 min-h-[520px] border-4 border-gray-300 rounded-xl
                 hover:border-blue-500 focus-within:border-blue-400 transition-all duration-300 shadow-md">
+                  <div className="flex flex-wrap md:flex-nowrap justify-between bg-zinc-900 p-6 rounded-lg text-white font-semibold">
+      
+      <div className="w-full md:w-[70%] grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div>
+          <label className="block mb-1">Search</label>
+          <div className="flex items-center bg-zinc-800 rounded px-2">
+            <input
+              type="text"
+              placeholder="Search problems..."
+              className="bg-transparent w-full p-2 outline-none"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+            />
+            <FaSearch />
+          </div>
+        </div>
 
+        <div>
+          <label className="block mb-1">Status</label>
+          <select value={status} onChange={(e) => setStatus(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
+            <option>All</option>
+            <option>Solved</option>
+            <option>Unsolved</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block mb-1">Difficulty</label>
+          <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
+            <option>All</option>
+            <option>Easy</option>
+            <option>Medium</option>
+            <option>Hard</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block mb-1">Pattern</label>
+          <select value={pattern} onChange={(e) => setPattern(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
+            <option>All Patterns</option>
+            <option>Arrays</option>
+            <option>String</option>
+            <option>Bit Manipulation</option>
+            <option>Hash Table</option>
+            <option>Two Pointer</option>
+          </select>
+        </div>
+
+        <div>
+          <label className="block mb-1">Preferred Language</label>
+          <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
+            <option>Java</option>
+            <option>Python</option>
+            <option>C++</option>
+            <option>JavaScript</option>
+          </select>
+        </div>
+
+        <div
+        onClick={resetFilters}
+        className="mt-8 hover:cursor-pointer">
+          Reset all Filters
+        </div>
+      </div>
+
+      
+      <div className="w-full md:w-1/4 mt-6 md:mt-0 text-center">
+        <h2 className="text-lg font-bold mb-4">{totalSolved} / 200 Solved</h2>
+        {[
+          { label: 'Easy', total: 50, solved: solvedProblems.easy  },
+          { label: 'Medium', total: 100, solved: solvedProblems.medium  },
+          { label: 'Hard', total: 50, solved: solvedProblems.hard  }
+        ].map(({ label, total, solved }) => {
+          const percentage=(solved/total) *100;
+          return(
+          <div key={label} className="mb-3 text-left">
+            <div className="flex justify-between text-sm mb-1">
+              <span>{label}</span>
+              <span>{solved} / {total}</span>
+            </div>
+            <div className="w-full bg-zinc-800 rounded-full h-2">
+              <div className="bg-white h-2 rounded-full" 
+              style={{width:`${percentage}%`}}
+              />
+            </div>
+          </div>
+          )
+})}
+      </div>
+    </div>
 
         </div>
 
