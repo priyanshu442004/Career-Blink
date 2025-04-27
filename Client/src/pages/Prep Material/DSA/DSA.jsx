@@ -41,9 +41,9 @@ const DSA = () => {
   };
   return (
 
-      <div className="flex flex-col justify-center items-center mt-30 space-y-4 text-center">
+      <div className="flex flex-col justify-center items-center space-y-4 text-center bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
 
-        <h1 className="text-4xl font-extrabold text-indigo-600 animate-bounce">
+        <h1 className="text-4xl font-extrabold text-indigo-600 animate-bounce  mt-30">
           Master DSA Pattern
         </h1>
         <h2 className="text-lg text-gray-1000 max-w-xl">
@@ -54,7 +54,7 @@ const DSA = () => {
 
         <div className="bg-white place-self-center w-11/12 max-w-large
                 flex flex-col p-7 min-h-[520px] border-4 border-gray-300 rounded-xl
-                hover:border-blue-500 focus-within:border-blue-400 transition-all duration-300 shadow-md">
+                hover:border-blue-500 focus-within:border-blue-400 transition-all duration-300 shadow-lg">
                   <div className="flex flex-wrap md:flex-nowrap justify-between bg-zinc-900 p-6 rounded-lg text-white font-semibold">
       
       <div className="w-full md:w-[70%] grid grid-cols-1 md:grid-cols-3 gap-4">

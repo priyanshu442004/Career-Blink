@@ -10,7 +10,7 @@ const Ats_Checker = () => {
   };
 
   return (
-    <div className="pb-20 overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center">
+    <div className="pb-20 overflow-x-hidden  bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
       
 
       {/* Hero Section */}

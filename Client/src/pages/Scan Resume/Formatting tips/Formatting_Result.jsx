@@ -17,7 +17,7 @@ const Formatting_Result = () => {
   ].map((h) => h.toLowerCase().trim()); 
 
   return (
-    <div className="pb-20 overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center min-h-screen flex flex-col justify-center w-full">
+    <div className="pb-20 overflow-x-hidden  bg-gradient-to-b from-blue-50 to-blue-100 pb-20 min-h-screen flex flex-col justify-center w-full">
       <h2 className="text-4xl underline text-center font-bold text-blue-400 mb-4 mt-[15vh]">Resume Review</h2>
 
       {sections.map((section, index) => {

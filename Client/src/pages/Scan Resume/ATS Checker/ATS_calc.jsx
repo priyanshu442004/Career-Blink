@@ -140,7 +140,7 @@ ${jobDes}
   }, []); 
 
   return (
-    isAllowed && (<div className="overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center h-screen flex flex-col items-center justify-center w-full">
+    isAllowed && (<div className="overflow-x-hidden  bg-gradient-to-b from-blue-50 to-blue-100 pb-20 h-screen flex flex-col items-center justify-center w-full">
      
      <BounceLoader />
      <br />

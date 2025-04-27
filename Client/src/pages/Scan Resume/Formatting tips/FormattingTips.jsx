@@ -10,7 +10,7 @@ const FormattingTips = () => {
   };
 
   return (
-    <div className="pb-20 overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center">
+    <div className="pb-20 overflow-x-hidden  bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
       
 
       {/* Hero Section */}
@@ -55,7 +55,7 @@ const FormattingTips = () => {
         <img src={formatting} alt="" className='w-[95%] rounded-lg h-[500px]'/>
       </div>
 
-      <div class="pb-6 px-16 mt-12 flex items-center text-lg text-gray-800 before:flex-1 before:border-t before:border-gray-500 before:me-6 after:flex-1 after:border-t after:border-gray-500 after:ms-6 dark:text-white dark:before:border-neutral-600 dark:after:border-neutral-600">Upload resume here</div>
+      <div class="pb-6 px-16 mt-12 flex items-center text-lg text-gray-800 before:flex-1 before:border-t before:border-gray-500 before:me-6 after:flex-1 after:border-t after:border-gray-500 after:ms-6 dark: dark:before:border-neutral-600 dark:after:border-neutral-600">Upload resume here</div>
       
   
         {/* {Resume component} */}
