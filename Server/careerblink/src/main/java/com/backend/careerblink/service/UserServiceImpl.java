@@ -1,12 +1,14 @@
 package com.backend.careerblink.service;
-
-import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
 import com.backend.careerblink.exception.EmailAlreadyExistsException;
+import com.backend.careerblink.exception.EmailDoesNotExistsException;
+import com.backend.careerblink.exception.PasswordDoesNotMatchException;
+import com.backend.careerblink.models.LoginRequest;
 import com.backend.careerblink.models.User;
 import com.backend.careerblink.repository.UserRepository;
 
@@ -24,9 +26,17 @@ public class UserServiceImpl implements UserService{
 		}
 		return userRepository.save(user);
 	}
-	 @Override
-	    public List<User> getAllStudent() {
-	        return userRepository.findAll();  // Retrieves all users from the database
-	    }
 	
+	@Override
+	public User authenticateUser(LoginRequest loginRequest) {
+		Optional<User> userOpt = userRepository.findByEmail(loginRequest.getEmail());
+			if(userOpt.isEmpty()) {
+				throw new EmailDoesNotExistsException("Email does not Exist");
+			}
+			User user = userOpt.get();
+			if(!user.getPassword().equals(loginRequest.getPassword())) {
+				throw new PasswordDoesNotMatchException("You have Entered the Wrong Password");
+			};
+			return user;
+	}
 }

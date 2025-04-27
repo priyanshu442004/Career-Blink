@@ -157,7 +157,7 @@ const DSA = () => {
         <tbody>
           {questions.map((question) => (
             <tr key={question.id} className="hover:bg-zinc-800 hover:cursor-pointer transition-all duration-200">
-              <td className="py-4 px-6 text-md font-medium text-white font-bold">{question.name}</td>
+              <td className="py-4 px-6 text-md text-white font-bold">{question.name}</td>
               <td className={`py-4 px-6 text-md font-bold ${question.difficulty=="Easy"?"text-green-500":
                 question.difficulty=="Medium"?"text-yellow-500":
                 question.difficulty=="Hard"?"text-red-500":""
