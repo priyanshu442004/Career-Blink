@@ -36,7 +36,7 @@ const AIMockInterview = () => {
   return (
     <div className="pb-20 overflow-x-hidden bg-[url('../src/assets/AIMOCK/mock1.jpg')] bg-cover bg-center flex flex-col items-center justify-center w-full">
       {/* Main Heading */}
-      <div className="text-black text-6xl font-extrabold text-center w-full mt-80 leading-tight">
+      <div className="text-black text-6xl font-extrabold text-center w-full mt-32 leading-tight">
         Prepare for your next interview
         <div className="text-black-800 mt-5 text-lg font-medium max-w-3xl mx-auto">
           Pick the position you are interviewing for, take an AI-powered
