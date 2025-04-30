@@ -45,9 +45,4 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore   // 🔥🔥 Add this line here
     private List<UserQuestion> solvedQuestions;
-    
-
- @Enumerated(EnumType.STRING) // Store as a string in the database
- private Providers provider = Providers.SELF;
- private String providerUserId;
 }

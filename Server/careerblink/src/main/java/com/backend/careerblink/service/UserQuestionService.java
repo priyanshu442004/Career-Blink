@@ -1,6 +1,8 @@
 package com.backend.careerblink.service;
 
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.backend.careerblink.models.User;
@@ -24,4 +26,9 @@ public class UserQuestionService {
 		solvedQuestion.setUser(user);
 		return userQuestionRepository.save(solvedQuestion);
 	}
+	
+	public List<UserQuestion> getAllSolvedQuestion(Long userId){
+		return userQuestionRepository.findByUser_Userid(userId);
+	}
+	
 }

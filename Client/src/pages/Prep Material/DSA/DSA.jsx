@@ -122,11 +122,11 @@ const DSA = () => {
 
       
       <div className="w-full md:w-1/4 mt-6 md:mt-0 text-center">
-        <h2 className="text-lg font-bold mb-4">{totalSolved} / 200 Solved</h2>
+        <h2 className="text-lg font-bold mb-4">{totalSolved} / 20 Solved</h2>
         {[
-          { label: 'Easy', total: 50, solved: solvedProblems.easy  },
-          { label: 'Medium', total: 100, solved: solvedProblems.medium  },
-          { label: 'Hard', total: 50, solved: solvedProblems.hard  }
+          { label: 'Easy', total: 10, solved: solvedProblems.easy  },
+          { label: 'Medium', total: 5, solved: solvedProblems.medium  },
+          { label: 'Hard', total: 5, solved: solvedProblems.hard  }
         ].map(({ label, total, solved }) => {
           const percentage=(solved/total) *100;
           return(
