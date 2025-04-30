@@ -1,5 +1,10 @@
 package com.backend.careerblink.models;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -7,15 +12,14 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@Getter
-@Setter
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
@@ -25,7 +29,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-    private int userid;
+    private Long userid;
 	@Column(name="user_name",nullable=false)
     private String name ;
 	@Column(unique=true,nullable=false)
@@ -38,10 +42,12 @@ public class User {
     private boolean emailVerified=false;
     private boolean phoneVerified=false;
     
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore   // 🔥🔥 Add this line here
+    private List<UserQuestion> solvedQuestions;
+    
 
  @Enumerated(EnumType.STRING) // Store as a string in the database
  private Providers provider = Providers.SELF;
-
- @Enumerated(EnumType.STRING) // Store as a string in the database
- private Providers providerUserId;
+ private String providerUserId;
 }

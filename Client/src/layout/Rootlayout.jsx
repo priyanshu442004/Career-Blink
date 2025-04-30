@@ -6,14 +6,14 @@ import Footer from "../component/Footer";
 const Rootlayout = () =>{
  
     const location = useLocation();
-  const hideHeaderFooter = ["/login", "/signup"].includes((location.pathname).toLowerCase()); 
+  //const hideHeaderFooter = ["/login", "/signup"].includes((location.pathname).toLowerCase()); 
     return(
         <div className="flex flex-col min-h-screen">
-          {!hideHeaderFooter && <NavBar />}
+          { <NavBar />}
           <main className="flex-grow">  
         <Outlet />
       </main>
-      {!hideHeaderFooter && <Footer />}
+      { <Footer />}
         </div>
     )
 }

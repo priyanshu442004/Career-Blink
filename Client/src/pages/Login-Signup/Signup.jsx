@@ -56,7 +56,7 @@ const Signup = () => {
 
   return (
     <div className="flex justify-center items-center h-screen bg-gradient-to-r from-purple-500 to-indigo-600">
-      <div className="bg-white p-8 rounded-2xl shadow-xl w-96 animate-fade-in">
+      <div className="bg-white p-8 rounded-2xl shadow-xl w-96 animate-fade-in mt-28 ">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
           Create an Account 🚀
         </h2>
