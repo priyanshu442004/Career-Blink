@@ -143,7 +143,7 @@ export default function HRFlashcardApp() {
     
       
 
-      <div className="bg-white shadow-lg rounded-xl p-8 mb-4 border w-[50%]">
+      <div className="bg-white shadow-lg rounded-xl p-8 mb-4 border h-64 w-[50%] flex flex-col items-center justify-center">
         <div className="text-xs text-gray-400 mb-2">Core · {current.core}</div>
         <div className="text-2xl font-semibold mb-4">
           {showAnswer ? current.answer : current.question}
