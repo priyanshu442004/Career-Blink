@@ -150,20 +150,37 @@ const Navbar = () => {
                   )}
                 </li>
               ))}
+             {!user?( <div>
+
               <NavLink
                 to="/login"
                 onClick={() => setIsOpen(false)}
                 className="font-semibold border-t pt-3 leading-none ml-[10px]"
-              >
+                >
                 Login
               </NavLink>
               <NavLink
                 to="/Signup"
                 onClick={() => setIsOpen(false)}
                 className="font-semibold bg-blue-600 text-white py-3 rounded-lg w-[20%] text-center leading-none"
-              >
+                >
                 Signup
               </NavLink>
+                </div>):(
+                <div className="flex items-center justify-center mt-4">
+                  <div
+                    className="bg-blue-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center text-lg cursor-pointer hover:bg-blue-700"
+                    title="Go to Profile"
+                    onClick={() => navigate("/Profile")}
+                  >
+                    {user.charAt(0).toUpperCase()}
+                  </div>
+                  <div className="ml-4 text-gray-800 font-semibold text-lg cursor-pointer hover:text-blue-600" onClick={() => navigate("/Profile")}>
+                    Profile
+                  </div>
+
+                </div>
+                )}
             </ul>
           </motion.div>
         )}
