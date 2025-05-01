@@ -54,7 +54,7 @@ const Notes = () => {
         </p>
       </div>
 
-      {/* Stylish Search Bar */}
+      
       <div className="flex justify-center mb-12 px-4">
         <input
           type="text"
@@ -65,7 +65,7 @@ const Notes = () => {
         />
       </div>
 
-      {/* Notes Section */}
+    
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto px-4">
         {filteredNotes.length > 0 ? (
           filteredNotes.map((note, index) => (
@@ -89,6 +89,7 @@ const Notes = () => {
           <p className="text-center text-gray-600 font-semibold text-lg col-span-2">No matching notes found 🚫</p>
         )}
       </div>
+      
     </div>
   );
 };
