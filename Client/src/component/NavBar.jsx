@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaChevronDown, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -7,7 +7,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(null);
   const [active, setActive] = useState("");
+  const [user, setUser] = useState(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    console.log("Fetched token:", token); // Debug
+    setUser(token); // direct value, not just true/false
+  }, []);
+  
 
   const menuItems = [
     { name: "Scan Resume", subItems: ["ATS Checker", "Formatting Tips"] },
@@ -66,7 +74,7 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <div className="hidden md:flex space-x-4 items-center bg-gray-100 shadow-md h-16 p-6 rounded-xl w-[20%] justify-between">
+          {!user?(<div className="hidden md:flex space-x-4 items-center bg-gray-100 shadow-md h-16 p-6 rounded-xl w-[20%] justify-between">
          <NavLink
            to="/login"
             className="border border-gray-00 text-gray-800 font-semibold px-5 py-2 text-lg rounded-lg hover:border-blue-600 transition leading-none hover:border-2"
@@ -78,8 +86,24 @@ const Navbar = () => {
              className="bg-blue-600 text-white font-semibold px-5 py-2 text-lg rounded-lg hover:bg-blue-700 transition leading-none"
           >
            Signup
-         </NavLink>  
-         </div>
+         </NavLink>
+         
+          
+         </div>):( <div className="hidden md:flex items-center bg-gray-100 shadow-md h-16 px-3 rounded-xl w-[10%] justify-center"
+         onClick={() => navigate("/Profile")}
+         >
+    <div
+      className="bg-blue-600 text-white font-bold rounded-full w-10 h-10 flex items-center justify-center text-lg cursor-pointer hover:bg-blue-700"
+      title="Go to Profile"
+      
+    >
+      {user.charAt(0).toUpperCase()}
+    </div>
+    <div className="ml-4 text-gray-800 font-semibold text-lg cursor-pointer hover:text-blue-600" onClick={() => navigate("/Profile")}>
+      Profile
+    </div>
+  </div>)
+}
           <button
             className="md:hidden text-gray-900 text-3xl leading-none"
             onClick={() => setIsOpen(!isOpen)}

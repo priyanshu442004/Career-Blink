@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios"; 
 import { useNavigate } from "react-router-dom";
 import { FaEnvelope, FaLock } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -18,7 +19,8 @@ const Login = () => {
         password,
       });
       // If successful
-    alert("Login successful:" + response.data);   
+    toast.success("Login successful!");
+    localStorage.setItem("token", email);
     //alert(`Login successful: ${response.data}`); 
     navigate("/"); // Navigate to homepage
     } catch(error){

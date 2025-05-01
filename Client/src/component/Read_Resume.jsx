@@ -19,11 +19,11 @@ const Read_Resume = (props) => {
 
     if (file) {
       const allowedFormats = ['application/pdf', 
-                              'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+                              ];
 
       
       if (!allowedFormats.includes(file.type)) {
-        toast.error('Invalid file format. Please upload a PDF or DOCX file.');
+        toast.error('Invalid file format. Please upload a PDF file only.');
         setFileName('');
         setUploaded(false);
         setText('');
@@ -120,10 +120,10 @@ const Read_Resume = (props) => {
 
         
         <p className="text-xs text-gray-400 text-center mt-4">
-          Supported formats: PDF, DOCX (Max size: 5MB)
+          Supported formats: PDF only (Max size: 5MB)
         </p>
       </div>
-     { props.show=="show" && (<div className='ml-16'>
+     { props.show=="show" && (<div className='ml-16 overflow-y-hidden'>
         <div className="w-96 h-[400px] bg-white rounded-lg overflow-y-auto p-4">
         <h2 className="text-2xl font-bold text-gray-800 mb-2 text-center">
           Enter job description

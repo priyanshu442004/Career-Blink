@@ -40,11 +40,7 @@ const Ats_Checker = () => {
         className='border hover:bg-gray-200 text-black font-bold py-2 px-4 rounded-lg mt-8'>
           Get AI tips for your resume
         </button>
-        <button
         
-        className='bg-blue-500 hover:bg-blue-700 border border-blue-900 text-white font-bold py-2 px-4 rounded-lg mt-8 ml-4'>
-          Check ATS score
-        </button>
         </p>
         <img src={resume} alt="" className='w-80 mr-12 block -mt-8 rounded-lg'/>
         </div>
