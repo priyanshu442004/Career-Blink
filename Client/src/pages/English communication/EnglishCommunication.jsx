@@ -106,7 +106,7 @@ export default function HRFlashcardApp() {
   const current = hrQuestions[index];
 
   return (
-    <div className=" mx-auto p-6 text-center flex flex-col items-center space-y-4 text-center bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
+    <div className=" mx-auto p-6 flex flex-col items-center space-y-4 text-center bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
       <div className="">
       <h1 className="text-4xl font-extrabold text-indigo-600 animate-bounce mt-35">
         Master HR Interview Question
