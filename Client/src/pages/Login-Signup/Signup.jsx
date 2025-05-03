@@ -41,13 +41,32 @@ const Signup = () => {
       if (!response.ok) {
         if(response.status === 409){
           const msg = await response.text();
-          alert(msg);
+          toast(msg,
+            {
+              icon: '👏',
+              style: {
+                borderRadius: '10px',
+                background: '#333',
+                color: '#fff',
+              },
+            }
+          );
         } else{
           throw new Error("Signup failed!");
         }
       } else{
-        toast.success("Please login now!");
-        navigate("/");
+        toast.success('Success, now Login.', {
+          style: {
+            border: '1px solid #713200',
+            padding: '16px',
+            color: '#713200',
+          },
+          iconTheme: {
+            primary: '#713200',
+            secondary: '#FFFAEE',
+          },
+        });
+        navigate("/login");
       }
     } catch (error) {
       console.error("Error:", error);

@@ -45,6 +45,9 @@ const ProfilePage = () => {
             <ActionButton icon={<FaSignOutAlt />} label="Logout" onClick={() => {
               localStorage.clear();
               navigate("/login");
+              setTimeout(() => {
+                window.location.reload();
+              }, 100);
             }} />
           </div>
         </div>
