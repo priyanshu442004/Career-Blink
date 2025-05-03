@@ -11,9 +11,8 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    console.log("Fetched token:", token); // Debug
-    setUser(token); // direct value, not just true/false
+    const username = localStorage.getItem("username");
+    setUser(username); 
   }, []);
   
 

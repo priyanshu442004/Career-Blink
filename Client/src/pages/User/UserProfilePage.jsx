@@ -6,8 +6,9 @@ import { useNavigate } from "react-router-dom";
 const ProfilePage = () => {
   const navigate = useNavigate();
   const email = localStorage.getItem("token") || "No data found";
+  const user = localStorage.getItem("username") || "No data found";
 
-  const initial = email.charAt(0).toUpperCase();
+  const initial = user.charAt(0).toUpperCase();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-100 to-indigo-200 flex justify-center items-center p-4">
@@ -17,12 +18,12 @@ const ProfilePage = () => {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className="bg-white rounded-3xl shadow-2xl max-w-4xl w-full p-10 flex flex-col md:flex-row gap-10"
       >
-        {/* Sidebar Profile Circle */}
+       
         <div className="flex flex-col items-center md:w-1/3 space-y-4">
           <div className="w-28 h-28 rounded-full bg-blue-600 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
             {initial}
           </div>
-          <h2 className="text-2xl font-semibold text-gray-800">Name</h2>
+          <h2 className="text-2xl font-semibold text-gray-800">{user.toUpperCase()}</h2>
           <p className="text-gray-500 text-sm">{email}</p>
         </div>
 

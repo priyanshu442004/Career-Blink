@@ -28,7 +28,7 @@ public class UserControllers {
 	}
 	@PostMapping("/api/auth/login")
 	public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest){
-		userService.authenticateUser(loginRequest);
-			return ResponseEntity.ok("Login successfully By Spring Boot.");
+		User user=userService.authenticateUser(loginRequest);
+			return ResponseEntity.ok(user.getName());
 		}
 	}
