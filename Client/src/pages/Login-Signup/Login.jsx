@@ -18,17 +18,15 @@ const Login = () => {
         email,
         password,
       });
-      // If successful
+     
     toast.success("Login successful!");
     localStorage.setItem("token", email);
-    //alert(`Login successful: ${response.data}`); 
-    navigate("/"); // Navigate to homepage
+    navigate("/"); 
     } catch(error){
       if (error.response) {
-        // Backend responded with a status other than 2xx
-        alert(error.response.data); // Shows "Email not registered" or "Incorrect password"
+        alert(error.response.data); 
     } else {
-      // Network error or something else
+      
       alert("An error occurred. Please try again.");
     }
     }

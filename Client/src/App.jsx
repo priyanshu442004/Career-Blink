@@ -17,6 +17,7 @@ import ATS_Score from './pages/Scan Resume/ATS Checker/ATS_Score';
 import Formatting_Calc from './pages/Scan Resume/Formatting tips/Formatting_Calc';
 import Formatting_Result from './pages/Scan Resume/Formatting tips/Formatting_Result';
 import JavaInterview from './pages/Mock Interview/AI mock Interview/JavaInterview';
+import ProfilePage from './pages/User/UserProfilePage';
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
          <Route path='/' element={<Rootlayout />}>
          <Route index element={<Home />} />
          <Route path='ATSChecker' element={<Ats_Checker />} />  
+         <Route path='Profile' element={<ProfilePage/>} />  
          <Route path='Formatting' element={<Formatting_Calc />} />  
          <Route path='Formatting-Resume' element={<Formatting_Result />} />  
          <Route path='ATS-Score' element={<ATS_Score />} />  
