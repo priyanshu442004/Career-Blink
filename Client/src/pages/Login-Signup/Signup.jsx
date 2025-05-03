@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUser, FaEnvelope, FaLock } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -45,12 +46,12 @@ const Signup = () => {
           throw new Error("Signup failed!");
         }
       } else{
-        alert("Signup Successful! Redirecting to login...");
+        toast.success("Please login now!");
         navigate("/");
       }
     } catch (error) {
       console.error("Error:", error);
-      alert("Signup failed. Please try again.");
+      toast.error("An error occurred. Please try again.");
     }
   };
 
