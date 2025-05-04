@@ -5,21 +5,25 @@ const AIMockInterview = () => {
   const goToPage = useNavigate();
   const interview = [
     {
-      technology: "Java",
-      skills: ["Core JAVA", "Spring Framework"]
+      technology: "Spring boot",
+      skills: ["Core JAVA", "Hibernate", "Spring Boot",]
     },
     {
-      technology: "C++",
-      skills: ["Core JAVA", "Spring Framework"]
+      technology: "Cloud",
+      skills: ["Cloud Platforms", "Cloud Security"]
     },
     {
-      technology: "JavaScript",
-      skills: ["JavaScript","React.js"]
+      technology: "Node.js Developer",
+      skills: ["Node.js", "Express.js", "MongoDB", "JavaScript"]
     },
     {
-      technology: "API Integration",
-      skills: ["API Integration"]
-    }
+      technology: "React.js Developer",
+      skills: ["JavaScript","React.js","Redux", "HTML", "CSS"]
+    },
+    {
+      technology: "SQL Developer",
+      skills: ["SQL", "Database Design", "Data Modeling"]
+    },
   ];
 
   const handleNavigate1 = (technology) => {
