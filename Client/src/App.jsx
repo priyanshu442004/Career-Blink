@@ -3,7 +3,6 @@ import { createBrowserRouter, createRoutesFromElements, Route,RouterProvider} fr
 import Home from './pages/Home';
 import FormattingTips from './pages/Scan Resume/Formatting tips/FormattingTips'
 import AIMockInterview from './pages/Mock Interview/AI mock Interview/AIMockInterview'
-import InterviewPractice from './pages/Mock Interview/Interview Practice/InterviewPractice';
 import InterviewTips from './pages/Mock Interview/Interview Tips/InterviewTips'
 import DSA from './pages/Prep Material/DSA/DSA';
 import Notes from './pages/Prep Material/Notes/Notes';
@@ -16,8 +15,8 @@ import ATS_calc from './pages/Scan Resume/ATS Checker/ATS_calc';
 import ATS_Score from './pages/Scan Resume/ATS Checker/ATS_Score';
 import Formatting_Calc from './pages/Scan Resume/Formatting tips/Formatting_Calc';
 import Formatting_Result from './pages/Scan Resume/Formatting tips/Formatting_Result';
-import JavaInterview from './pages/Mock Interview/AI mock Interview/JavaInterview';
 import ProfilePage from './pages/User/UserProfilePage';
+import InterviewSetup from './pages/Mock Interview/AI mock Interview/InterviewSetup';
 
 const App = () => {
 
@@ -32,13 +31,11 @@ const App = () => {
          <Route path='ATS-Score' element={<ATS_Score />} />  
          <Route path='Calculating-score' element={<ATS_calc />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
+         <Route path='Setup-Your_Intervew' element={<InterviewSetup />} />  
 
          {/* AIMockInterview with nested route */}
          <Route path='AIMockInterview' element={<AIMockInterview />} /> 
          
-         <Route path='AIMockInterview/JavaInterview' element={<JavaInterview />} />
-
-         <Route path='InterviewPractice' element={<InterviewPractice />} /> 
          <Route path='InterviewTips' element={<InterviewTips />} /> 
          <Route path='DSA' element={<DSA />} />
          <Route path='Notes' element={<Notes />} />
