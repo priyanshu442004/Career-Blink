@@ -48,7 +48,7 @@ const Notes = () => {
   return (
     <div className="pb-20 min-h-screen bg-gradient-to-b from-blue-50 to-blue-100">
       <div className="pt-32 max-w-3xl mx-auto text-center mb-8 px-4">
-        <h1 className="text-4xl font-extrabold text-blue-700 mb-4">Study Material Hub 📚</h1>
+        <h1 className="text-4xl font-extrabold text-indigo-600 animate-bounce  mb-4">Study Material Hub 📚</h1>
         <p className="text-lg text-gray-700 leading-relaxed">
           Access high-quality, curated notes for your favorite technologies. Choose your topic below and dive into learning with our handpicked resources designed to help you succeed!
         </p>
