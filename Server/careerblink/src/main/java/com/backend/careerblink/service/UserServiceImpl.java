@@ -5,10 +5,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import com.backend.careerblink.dtos.LoginRequest;
 import com.backend.careerblink.exception.EmailAlreadyExistsException;
 import com.backend.careerblink.exception.EmailDoesNotExistsException;
 import com.backend.careerblink.exception.PasswordDoesNotMatchException;
-import com.backend.careerblink.models.LoginRequest;
 import com.backend.careerblink.models.User;
 import com.backend.careerblink.repository.UserRepository;
 

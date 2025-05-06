@@ -36,11 +36,11 @@ public class User {
     private String email;
 	
     private String password;
-    private String profilePic;
-    //information
-    private boolean enabled=false;
-    private boolean emailVerified=false;
-    private boolean phoneVerified=false;
+//    private String profilePic;
+//    //information
+//    private boolean enabled=false;
+//    private boolean emailVerified=false;
+//    private boolean phoneVerified=false;
     
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore   // 🔥🔥 Add this line here

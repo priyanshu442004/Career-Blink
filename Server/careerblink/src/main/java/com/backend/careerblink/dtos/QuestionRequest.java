@@ -1,4 +1,4 @@
-package DTOs;
+package com.backend.careerblink.dtos;
 
 import lombok.Data;
 

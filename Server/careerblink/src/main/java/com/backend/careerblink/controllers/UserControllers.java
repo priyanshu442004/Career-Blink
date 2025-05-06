@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.backend.careerblink.models.LoginRequest;
+import com.backend.careerblink.dtos.LoginRequest;
 import com.backend.careerblink.models.User;
 import com.backend.careerblink.service.UserService;
 

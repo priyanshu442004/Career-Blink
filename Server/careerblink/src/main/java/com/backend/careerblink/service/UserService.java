@@ -1,6 +1,6 @@
 package com.backend.careerblink.service;
 
-import com.backend.careerblink.models.LoginRequest;
+import com.backend.careerblink.dtos.LoginRequest;
 import com.backend.careerblink.models.User;
 
 public interface UserService {

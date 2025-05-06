@@ -1,14 +1,16 @@
 
-import React from "react";
+import React, { useEffect } from "react";
+import {fetchAllQuestion} from '../DSA/QuestionService'
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 const DSA = () => {
   const [search, setSearch] = useState('');
+  const [questions,setQuestions] = useState([]);
   const [status, setStatus] = useState('All');
   const [difficulty, setDifficulty] = useState('All');
-  const [pattern, setPattern] = useState('All Patterns');
-  const [language, setLanguage] = useState('Java');
+  // const [pattern, setPattern] = useState('All Patterns');
+  // const [language, setLanguage] = useState('Java');
   const [solvedProblems, setSolvedProblems] = useState({
     easy: 0,
     medium: 0,
@@ -16,29 +18,41 @@ const DSA = () => {
   });
   const [totalSolved, setTotalSolved] = useState(solvedProblems.easy + solvedProblems.medium + solvedProblems.hard);
 
-  const [questions, setQuestions] = useState([
-    { id: 1, name: "Two Sum", difficulty: "Easy", completed: false },
-    { id: 2, name: "Longest Substring Without Repeating Characters", difficulty: "Medium", completed: false },
-    { id: 3, name: "Merge Intervals", difficulty: "Hard", completed: false }
-  ]);
+  const loadDSAQuestion = async () => {
+       try{
+        const data = await fetchAllQuestion();
+        setQuestions(data);
+        console.log(questions);
+       } catch(err){
+        alert("Failed to load Question");
+       }
+  }
+   useEffect(() =>{
+    loadDSAQuestion();
+   },[]);
+  // const [questions, setQuestions] = useState([
+  //   { id: 1, name: "Two Sum", difficulty: "Easy", completed: false },
+  //   { id: 2, name: "Longest Substring Without Repeating Characters", difficulty: "Medium", completed: false },
+  //   { id: 3, name: "Merge Intervals", difficulty: "Hard", completed: false }
+  // ]);
 
   const resetFilters = () => {
     setSearch('');
     setStatus('All');
     setDifficulty('All');
-    setPattern('All Patterns');
-    setLanguage('Java');
+    // setPattern('All Patterns');
+    // setLanguage('Java');
   };
 
-  const handleToggleCompleted = (id) => {
-    setQuestions((prevQuestions) =>
-      prevQuestions.map((question) =>
-        question.id === id
-          ? { ...question, completed: !question.completed }
-          : question
-      )
-    );
-  };
+  // const handleToggleCompleted = (id) => {
+  //   setQuestions((prevQuestions) =>
+  //     prevQuestions.map((question) =>
+  //       question.id === id
+  //         ? { ...question, completed: !question.completed }
+  //         : question
+  //     )
+  //   );
+  // };
   return (
 
       <div className="flex flex-col justify-center items-center space-y-4 text-center bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
@@ -91,7 +105,7 @@ const DSA = () => {
           </select>
         </div>
 
-        <div>
+        {/* <div>
           <label className="block mb-1">Pattern</label>
           <select value={pattern} onChange={(e) => setPattern(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
             <option>All Patterns</option>
@@ -101,9 +115,9 @@ const DSA = () => {
             <option>Hash Table</option>
             <option>Two Pointer</option>
           </select>
-        </div>
+        </div> */}
 
-        <div>
+        {/* <div>
           <label className="block mb-1">Preferred Language</label>
           <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
             <option>Java</option>
@@ -111,7 +125,7 @@ const DSA = () => {
             <option>C++</option>
             <option>JavaScript</option>
           </select>
-        </div>
+        </div> */}
 
         <div
         onClick={resetFilters}

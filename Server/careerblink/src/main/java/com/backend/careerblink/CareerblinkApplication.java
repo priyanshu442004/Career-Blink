@@ -9,5 +9,4 @@ public class CareerblinkApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CareerblinkApplication.class, args);
 	}
-
 }

@@ -26,5 +26,4 @@ public class UserQuestion {
 	@JoinColumn(name = "user_id", nullable = false)
 	private User user;
 	private Long questionId;
-	private String difficulty;
 }
