@@ -11,6 +11,14 @@ const DSA = () => {
   const [status, setStatus] = useState('All');
   const [difficulty, setDifficulty] = useState('All');
   const [loader,setLoader] = useState(false);
+
+  
+const filteredQuestions = questions.filter((question) => {
+  const matchesSearch = question.name.toLowerCase().includes(search.toLowerCase());
+  const matchesDifficulty = difficulty === 'All' || question.difficulty === difficulty;
+  return matchesSearch && matchesDifficulty;
+});
+
  
 
   const [solvedProblems, setSolvedProblems] = useState({
@@ -139,7 +147,7 @@ const DSA = () => {
           </tr>
         </thead>
        { loader?(<ClipLoader color="#ffffff" />):( <tbody>
-          {questions.map((question) => (
+          {filteredQuestions.map((question) => (
             <tr key={question.id} className="hover:bg-zinc-800 hover:cursor-pointer transition-all duration-200">
               <td className="py-4 px-6 text-md text-white font-bold">{question.name}</td>
               <td className={`py-4 px-6 text-md font-bold ${question.difficulty=="Easy"?"text-green-500":
