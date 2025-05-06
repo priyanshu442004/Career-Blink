@@ -18,7 +18,7 @@ const Navbar = () => {
 
   const menuItems = [
     { name: "Scan Resume", subItems: ["ATS Checker", "Formatting Tips"] },
-    { name: "Mock Interview", subItems: ["AI Mock Interview", "Interview Practice", "Interview Tips"] },
+    { name: "Mock Interview", subItems: ["AI Mock Interview", "Interview Tips"] },
     { name: "Prep Material", subItems: ["DSA", "Notes"] },
     { name: "English Communication", path: "/EnglishCommunication" },
   ];

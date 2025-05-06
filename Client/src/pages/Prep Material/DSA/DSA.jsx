@@ -3,14 +3,16 @@ import React, { useEffect } from "react";
 import {fetchAllQuestion} from '../DSA/QuestionService'
 import { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import ClipLoader from "react-spinners/ClipLoader";
 
 const DSA = () => {
   const [search, setSearch] = useState('');
   const [questions,setQuestions] = useState([]);
   const [status, setStatus] = useState('All');
   const [difficulty, setDifficulty] = useState('All');
-  // const [pattern, setPattern] = useState('All Patterns');
-  // const [language, setLanguage] = useState('Java');
+  const [loader,setLoader] = useState(false);
+ 
+
   const [solvedProblems, setSolvedProblems] = useState({
     easy: 0,
     medium: 0,
@@ -20,9 +22,10 @@ const DSA = () => {
 
   const loadDSAQuestion = async () => {
        try{
+        setLoader(true);
         const data = await fetchAllQuestion();
         setQuestions(data);
-        console.log(questions);
+        setLoader(false);
        } catch(err){
         alert("Failed to load Question");
        }
@@ -30,29 +33,16 @@ const DSA = () => {
    useEffect(() =>{
     loadDSAQuestion();
    },[]);
-  // const [questions, setQuestions] = useState([
-  //   { id: 1, name: "Two Sum", difficulty: "Easy", completed: false },
-  //   { id: 2, name: "Longest Substring Without Repeating Characters", difficulty: "Medium", completed: false },
-  //   { id: 3, name: "Merge Intervals", difficulty: "Hard", completed: false }
-  // ]);
+  
 
   const resetFilters = () => {
     setSearch('');
     setStatus('All');
     setDifficulty('All');
-    // setPattern('All Patterns');
-    // setLanguage('Java');
+   
   };
 
-  // const handleToggleCompleted = (id) => {
-  //   setQuestions((prevQuestions) =>
-  //     prevQuestions.map((question) =>
-  //       question.id === id
-  //         ? { ...question, completed: !question.completed }
-  //         : question
-  //     )
-  //   );
-  // };
+  
   return (
 
       <div className="flex flex-col justify-center items-center space-y-4 text-center bg-gradient-to-b from-blue-50 to-blue-100 pb-20">
@@ -105,27 +95,7 @@ const DSA = () => {
           </select>
         </div>
 
-        {/* <div>
-          <label className="block mb-1">Pattern</label>
-          <select value={pattern} onChange={(e) => setPattern(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
-            <option>All Patterns</option>
-            <option>Arrays</option>
-            <option>String</option>
-            <option>Bit Manipulation</option>
-            <option>Hash Table</option>
-            <option>Two Pointer</option>
-          </select>
-        </div> */}
-
-        {/* <div>
-          <label className="block mb-1">Preferred Language</label>
-          <select value={language} onChange={(e) => setLanguage(e.target.value)} className="w-full p-2 bg-zinc-800 rounded">
-            <option>Java</option>
-            <option>Python</option>
-            <option>C++</option>
-            <option>JavaScript</option>
-          </select>
-        </div> */}
+      
 
         <div
         onClick={resetFilters}
@@ -168,7 +138,7 @@ const DSA = () => {
             <th className="py-3 px-6 text-center text-md  text-white font-semibold">Status</th>
           </tr>
         </thead>
-        <tbody>
+       { loader?(<ClipLoader color="#ffffff" />):( <tbody>
           {questions.map((question) => (
             <tr key={question.id} className="hover:bg-zinc-800 hover:cursor-pointer transition-all duration-200">
               <td className="py-4 px-6 text-md text-white font-bold">{question.name}</td>
@@ -186,7 +156,7 @@ const DSA = () => {
               </td>
             </tr>
           ))}
-        </tbody>
+        </tbody>)}
       </table>
     </div>
         </div>
