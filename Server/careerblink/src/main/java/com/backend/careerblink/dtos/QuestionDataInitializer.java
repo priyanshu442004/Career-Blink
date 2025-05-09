@@ -29,7 +29,7 @@ public class QuestionDataInitializer implements CommandLineRunner {
 				    new AllQuestion(null, "Valid Parentheses", "Easy", "https://leetcode.com/problems/valid-parentheses/"),
 				    new AllQuestion(null, "Best Time to Buy and Sell Stock", "Easy", "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"),
 				    new AllQuestion(null, "Valid Anagram", "Easy", "https://leetcode.com/problems/valid-anagram/"),
-				    new AllQuestion(null, "Group Anagrams", "Medium", "https://leetcode.com/problems/group-anagrams/"),
+				    new AllQuestion(null, "Group Anagrams", "Hard", "https://leetcode.com/problems/group-anagrams/"),
 				    new AllQuestion(null, "Top K Frequent Elements", "Medium", "https://leetcode.com/problems/top-k-frequent-elements/"),
 				    new AllQuestion(null, "Product of Array Except Self", "Medium", "https://leetcode.com/problems/product-of-array-except-self/"),
 				    new AllQuestion(null, "Maximum Subarray", "Easy", "https://leetcode.com/problems/maximum-subarray/"),
@@ -37,12 +37,12 @@ public class QuestionDataInitializer implements CommandLineRunner {
 				    new AllQuestion(null, "Find Minimum in Rotated Sorted Array", "Medium", "https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/"),
 				    new AllQuestion(null, "Search in Rotated Sorted Array", "Medium", "https://leetcode.com/problems/search-in-rotated-sorted-array/"),
 				    new AllQuestion(null, "Container With Most Water", "Medium", "https://leetcode.com/problems/container-with-most-water/"),
-				    new AllQuestion(null, "Climbing Stairs", "Easy", "https://leetcode.com/problems/climbing-stairs/"),
+				    new AllQuestion(null, "Climbing Stairs", "Hard", "https://leetcode.com/problems/climbing-stairs/"),
 				    new AllQuestion(null, "Coin Change", "Medium", "https://leetcode.com/problems/coin-change/"),
 				    new AllQuestion(null, "Longest Increasing Subsequence", "Medium", "https://leetcode.com/problems/longest-increasing-subsequence/"),
-				    new AllQuestion(null, "Word Break", "Medium", "https://leetcode.com/problems/word-break/"),
+				    new AllQuestion(null, "Word Break", "Hard", "https://leetcode.com/problems/word-break/"),
 				    new AllQuestion(null, "Combination Sum", "Medium", "https://leetcode.com/problems/combination-sum/"),
-				    new AllQuestion(null, "Course Schedule", "Medium", "https://leetcode.com/problems/course-schedule/"));
+				    new AllQuestion(null, "Course Schedule", "Hard", "https://leetcode.com/problems/course-schedule/"));
 			
 			questionRepository.saveAll(questions);
 			System.out.println("✅ Questions inserted successfully!");

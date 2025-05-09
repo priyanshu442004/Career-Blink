@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.backend.careerblink.dtos.LoginRequest;
+import com.backend.careerblink.dtos.LoginResponse;
 import com.backend.careerblink.models.User;
 import com.backend.careerblink.service.UserService;
 
@@ -27,8 +28,9 @@ public class UserControllers {
 		return "New Student is added";
 	}
 	@PostMapping("/api/auth/login")
-	public ResponseEntity<String> login(@RequestBody LoginRequest loginRequest){
+	public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest){
 		User user=userService.authenticateUser(loginRequest);
-			return ResponseEntity.ok(user.getName());
+		LoginResponse response = new LoginResponse(user.getName(), user.getUserid()); // Assuming your User entity has a getId() method
+			return ResponseEntity.ok(response);
 		}
 	}

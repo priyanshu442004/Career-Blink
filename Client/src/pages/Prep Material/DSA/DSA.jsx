@@ -1,4 +1,5 @@
 
+import axios from 'axios';
 import React, { useEffect } from "react";
 import {fetchAllQuestion} from '../DSA/QuestionService'
 import { useState } from 'react';
@@ -29,15 +30,26 @@ const filteredQuestions = questions.filter((question) => {
   const [totalSolved, setTotalSolved] = useState(solvedProblems.easy + solvedProblems.medium + solvedProblems.hard);
 
   const loadDSAQuestion = async () => {
-       try{
-        setLoader(true);
-        const data = await fetchAllQuestion();
-        setQuestions(data);
-        setLoader(false);
-       } catch(err){
-        alert("Failed to load Question");
-       }
-  }
+    try {
+      setLoader(true);
+      const userId = localStorage.getItem("userId");
+      const [questionRes, solvedRes] = await Promise.all([
+        fetchAllQuestion(),
+        userId ? axios.get(`http://localhost:8080/api/question/solved/${userId}`) : Promise.resolve({ data: [] }) 
+      ]);
+  
+      const solvedIds = solvedRes?.data || []; // changed this line
+      const questionsWithStatus = questionRes.map(q => ({
+        ...q,
+        completed: solvedIds.includes(q.id)
+      }));
+      setQuestions(questionsWithStatus);
+      setLoader(false);
+    } catch (err) {
+      alert("Failed to load Questions");
+    }
+  };
+  
    useEffect(() =>{
     loadDSAQuestion();
    },[]);
@@ -50,6 +62,31 @@ const filteredQuestions = questions.filter((question) => {
    
   };
 
+  const handleToggleCompleted = async (questionId) => {
+    const token = localStorage.getItem("token");
+    const userId = localStorage.getItem("userId");
+  
+    if (!token || !userId) {
+      window.location.href = "/login";
+      return;
+    }
+  
+    const updatedQuestions = questions.map(q =>
+      q.id === questionId ? { ...q, completed: !q.completed } : q
+    );
+    setQuestions(updatedQuestions);
+  
+    try {
+      await axios.post("http://localhost:8080/api/question/toggle", {
+        questionId,
+        userId: parseInt(userId),
+        solved: updatedQuestions.find(q => q.id === questionId).completed
+      });
+    } catch (error) {
+      console.error("Failed to update status", error);
+    }
+  };
+  
   
   return (
 

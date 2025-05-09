@@ -21,7 +21,10 @@ const Login = () => {
      
     toast.success("Login successful!");
     localStorage.setItem("token", email);
-    localStorage.setItem("username", response.data);
+    localStorage.setItem("username", response.data.name);
+    console.log(response.data.name);
+    localStorage.setItem("userId", response.data.userid);
+    console.log(response.data.userid);
     navigate("/"); 
     } catch(error){
       if (error.response) {

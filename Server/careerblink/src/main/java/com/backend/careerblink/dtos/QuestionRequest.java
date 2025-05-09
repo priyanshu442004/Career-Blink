@@ -6,5 +6,5 @@ import lombok.Data;
 public class QuestionRequest {
     private Long userId;
     private Long questionId;
-    private String difficulty;
+    private boolean solved; // <-- used for toggle endpoint
 }

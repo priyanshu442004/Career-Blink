@@ -20,15 +20,26 @@ public class UserQuestionService {
 		this.userRepository = userRepository;
 	}
 	
-	public UserQuestion saveSolvedQuestion(UserQuestion solvedQuestion,Long userId) {
-		User user = userRepository.findById(userId)
-				    .orElseThrow(() -> new RuntimeException ("User not find"));
-		solvedQuestion.setUser(user);
-		return userQuestionRepository.save(solvedQuestion);
-	}
-	
-	public List<UserQuestion> getAllSolvedQuestion(Long userId){
-		return userQuestionRepository.findByUser_Userid(userId);
-	}
+	public void saveSolvedQuestion(Long questionId, Long userId) {
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
+        if (userQuestionRepository.existsByUserIdAndQuestionId(userId, questionId)) return;
+
+        UserQuestion userQuestion = UserQuestion.builder()
+                .questionId(questionId)
+                .user(user)
+                .build();
+
+        userQuestionRepository.save(userQuestion);
+    }
+
+    public void deleteSolvedQuestion(Long questionId, Long userId) {
+        userQuestionRepository.deleteByUserIdAndQuestionId(userId, questionId);
+    }
+
+    public List<Long> getSolvedQuestionIds(Long userId) {
+        return userQuestionRepository.findQuestionIdsByUserId(userId);
+    }
 	
 }
