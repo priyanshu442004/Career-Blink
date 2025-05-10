@@ -17,7 +17,11 @@ const DSA = () => {
 const filteredQuestions = questions.filter((question) => {
   const matchesSearch = question.name.toLowerCase().includes(search.toLowerCase());
   const matchesDifficulty = difficulty === 'All' || question.difficulty === difficulty;
-  return matchesSearch && matchesDifficulty;
+   const matchesStatus =
+    status === 'All' ||
+    (status === 'Solved' && question.completed) ||
+    (status === 'Unsolved' && !question.completed);
+  return matchesSearch && matchesDifficulty && matchesStatus;
 });
 
  
