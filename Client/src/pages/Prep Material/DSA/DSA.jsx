@@ -193,7 +193,9 @@ const filteredQuestions = questions.filter((question) => {
               <td
               onClick={()=>window.open(question.leetCodeLink, "_blank")}  
               className="py-4 px-6 text-md text-white font-bold">{question.name}</td>
-              <td className={`py-4 px-6 text-md font-bold ${question.difficulty=="Easy"?"text-green-500":
+              <td
+              onClick={()=>window.open(question.leetCodeLink, "_blank")}  
+              className={`py-4 px-6 text-md font-bold ${question.difficulty=="Easy"?"text-green-500":
                 question.difficulty=="Medium"?"text-yellow-500":
                 question.difficulty=="Hard"?"text-red-500":""
               }`}>{question.difficulty}</td>
