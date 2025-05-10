@@ -10,6 +10,7 @@ const Signup = () => {
     password: "",
     confirmPassword: "",
   });
+  const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
@@ -20,7 +21,8 @@ const Signup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match!");
+      // alert("Passwords do not match!");
+      setError("Passwords do not match!");
       return;
     }
     const userData = {
@@ -144,7 +146,9 @@ const Signup = () => {
               />
             </div>
           </div>
-
+    <div className="text-red-500 text-sm mb-4">
+      {error}
+    </div>
           <button
             type="submit"
             className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-lg font-medium transition duration-300 transform hover:scale-105"

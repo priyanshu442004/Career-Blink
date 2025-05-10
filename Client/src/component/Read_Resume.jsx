@@ -115,7 +115,7 @@ const Read_Resume = (props) => {
           } text-white py-2 rounded-full font-medium transition hover:opacity-90 flex items-center justify-center`}
           
         >
-          {props.show=="show"?'Check ATS':'Calculate'} {' '} <CiLocationArrow1 className='font-bold text-xl'/>
+          {props.show=="show"?'Check ATS':'Format'} {' '} <CiLocationArrow1 className='font-bold text-xl'/>
         </button>
 
         

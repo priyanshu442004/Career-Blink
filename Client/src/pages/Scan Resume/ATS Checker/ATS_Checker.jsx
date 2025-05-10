@@ -52,10 +52,10 @@ const Ats_Checker = () => {
       {/* {Resume component} */}
       <Read_Resume show="show"/>
 
-      <div className='w-screen flex items-center justify-center mt-[7%]'>
+      <div className='w-screen flex items-center justify-center mt-[7%] hover:cursor-pointer'>
             <button onClick={()=>{
                 window.location.href = "mailto:harshitvarshneyv2@gmail.com";
-            }} className='bg-[#186cec] md:w-[12vw] p-2 rounded-[10px] border border-black text-white'>
+            }} className='bg-[#186cec] md:w-[12vw] p-2 rounded-[10px] border border-black text-white hover:cursor-pointer'>
                 Need Help?  
             </button>
         </div>
