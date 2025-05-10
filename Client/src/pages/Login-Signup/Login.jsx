@@ -25,8 +25,8 @@ const Login = () => {
     console.log(response.data.name);
     localStorage.setItem("userId", response.data.userid);
     console.log(response.data.userid);
-    navigate("/"); 
-    } catch(error){
+      window.location.href = "/";
+  } catch(error){
       if (error.response) {
         alert(error.response.data); 
     } else {
