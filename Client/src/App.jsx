@@ -18,6 +18,7 @@ import Formatting_Result from './pages/Scan Resume/Formatting tips/Formatting_Re
 import ProfilePage from './pages/User/UserProfilePage';
 import InterviewSetup from './pages/Mock Interview/AI mock Interview/InterviewSetup';
 import StartInterview from './pages/Mock Interview/AI mock Interview/StartInterview';
+import InterviewResults from './pages/Mock Interview/AI mock Interview/InterviewResults';
 
 const App = () => {
 
@@ -34,6 +35,7 @@ const App = () => {
          <Route path='FormattingTips' element={<FormattingTips />} />  
          <Route path='Setup-Your-Intervew' element={<InterviewSetup />} />  
          <Route path='Start-Interview' element={<StartInterview />} />  
+         <Route path='interviewResults' element={<InterviewResults />} />  
 
          {/* AIMockInterview with nested route */}
          <Route path='AIMockInterview' element={<AIMockInterview />} /> 
