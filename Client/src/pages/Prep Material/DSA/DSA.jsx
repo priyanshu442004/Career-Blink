@@ -187,7 +187,15 @@ const filteredQuestions = questions.filter((question) => {
             <th className="py-3 px-6 text-center text-md  text-white font-semibold">Status</th>
           </tr>
         </thead>
-       { loader?(<ClipLoader color="#ffffff" />):( <tbody>
+       { loader?(<ClipLoader color="#ffffff" />):( filteredQuestions.length === 0 ? (
+  <tbody>
+    <tr>
+      <td colSpan="3" className="text-center text-white py-6 text-lg font-semibold">
+        No question matches the search
+      </td>
+    </tr>
+  </tbody>
+) : (<tbody>
           {filteredQuestions.map((question) => (
             <tr key={question.id} className="hover:bg-zinc-800 hover:cursor-pointer transition-all duration-200">
               <td
@@ -209,7 +217,7 @@ const filteredQuestions = questions.filter((question) => {
               </td>
             </tr>
           ))}
-        </tbody>)}
+        </tbody>))}
       </table>
     </div>
         </div>
