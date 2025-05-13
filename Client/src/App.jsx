@@ -17,6 +17,7 @@ import Formatting_Calc from './pages/Scan Resume/Formatting tips/Formatting_Calc
 import Formatting_Result from './pages/Scan Resume/Formatting tips/Formatting_Result';
 import ProfilePage from './pages/User/UserProfilePage';
 import InterviewSetup from './pages/Mock Interview/AI mock Interview/InterviewSetup';
+import StartInterview from './pages/Mock Interview/AI mock Interview/StartInterview';
 
 const App = () => {
 
@@ -31,7 +32,8 @@ const App = () => {
          <Route path='ATS-Score' element={<ATS_Score />} />  
          <Route path='Calculating-score' element={<ATS_calc />} />  
          <Route path='FormattingTips' element={<FormattingTips />} />  
-         <Route path='Setup-Your_Intervew' element={<InterviewSetup />} />  
+         <Route path='Setup-Your-Intervew' element={<InterviewSetup />} />  
+         <Route path='Start-Interview' element={<StartInterview />} />  
 
          {/* AIMockInterview with nested route */}
          <Route path='AIMockInterview' element={<AIMockInterview />} /> 

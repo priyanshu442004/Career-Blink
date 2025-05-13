@@ -28,7 +28,7 @@ const AIMockInterview = () => {
 
   const handleNavigate1 = (technology) => {
     localStorage.setItem("allowSetup", true);
-    goToPage(`/Setup-Your_Intervew?tech=${technology}`);
+    goToPage(`/Setup-Your-Intervew?tech=${technology}`);
   };
   return (
   <div className="pb-20 min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 flex flex-col items-center justify-center w-full">

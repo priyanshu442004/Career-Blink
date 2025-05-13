@@ -18,7 +18,7 @@ const InterviewSetup = () => {
   
 
   const questionQuantity = (value) => {
-    if(value<=0){
+    if(value<0){
         return;
     }
     if(value >= 3 && value <= 20) {
@@ -41,7 +41,7 @@ const InterviewSetup = () => {
         toast.error("Please enter correct details to continue");
         return;
     }
-    navigate(`/startInterview?${queryParams.toString()}`);
+    navigate(`/Start-Interview?${queryParams.toString()}`);
   };
 
   
