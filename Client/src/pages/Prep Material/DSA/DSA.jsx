@@ -65,6 +65,15 @@ const filteredQuestions = questions.filter((question) => {
     setDifficulty('All');
    
   };
+  const updateSolvedStats = (questionList) => {
+  const easy = questionList.filter(q => q.difficulty === "Easy" && q.completed).length;
+  const medium = questionList.filter(q => q.difficulty === "Medium" && q.completed).length;
+  const hard = questionList.filter(q => q.difficulty === "Hard" && q.completed).length;
+
+  setSolvedProblems({ easy, medium, hard });
+  setTotalSolved(easy + medium + hard);
+};
+
 
   const handleToggleCompleted = async (questionId) => {
     const token = localStorage.getItem("token");
@@ -79,6 +88,7 @@ const filteredQuestions = questions.filter((question) => {
       q.id === questionId ? { ...q, completed: !q.completed } : q
     );
     setQuestions(updatedQuestions);
+     updateSolvedStats(updatedQuestions); 
   
     try {
       await axios.post("http://localhost:8080/api/question/toggle", {
