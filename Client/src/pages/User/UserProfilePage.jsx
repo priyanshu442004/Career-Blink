@@ -40,8 +40,8 @@ const ProfilePage = () => {
           </div>
 
           <div className="flex gap-4 mt-6">
-            <ActionButton icon={<FaUserEdit />} label="Change Username" onClick={() => navigate("/change-username")} />
-            <ActionButton icon={<FaKey />} label="Forgot Password" onClick={() => navigate("/forgot-password")} />
+            {/* <ActionButton icon={<FaUserEdit />} label="Change Username" onClick={() => navigate("/change-username")} />
+            <ActionButton icon={<FaKey />} label="Forgot Password" onClick={() => navigate("/forgot-password")} /> */}
             <ActionButton icon={<FaSignOutAlt />} label="Logout" onClick={() => {
               localStorage.clear();
               navigate("/login");
