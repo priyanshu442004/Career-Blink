@@ -82,8 +82,8 @@ Respond strictly in this JSON format:
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-10 px-4 mt-20">
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-3xl p-8 space-y-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 py-10 px-4 ">
+      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-3xl p-8 space-y-8 mt-20">
         <h1 className="text-3xl font-bold text-center text-blue-700">Interview Results</h1>
 
         {results.map((res, index) => (

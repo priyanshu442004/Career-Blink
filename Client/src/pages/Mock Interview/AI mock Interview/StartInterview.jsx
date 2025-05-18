@@ -67,6 +67,11 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       return;
     }
 
+    const updatedAnswers = [
+    ...answers,
+    { question: questions[currentIndex], answer: userAnswer },
+  ];
+
     setAnswers((prev) => [
       ...prev,
       { question: questions[currentIndex], answer: userAnswer },
@@ -74,9 +79,11 @@ const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     setUserAnswer("");
 
     if (currentIndex + 1 < questions.length) {
+      setAnswers(updatedAnswers)
       setCurrentIndex(currentIndex + 1);
+      setUserAnswer("");
     } else {
-      navigate("/interviewResults", { state: { answers } });
+      navigate("/interviewResults", { state: { answers:updatedAnswers } });
     }
   };
 
